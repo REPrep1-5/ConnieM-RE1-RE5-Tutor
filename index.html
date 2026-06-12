@@ -1810,5 +1810,40 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+   <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBIS0HxI8J8LEPJ1sB0_RFwHefI9vFBsvw",
+    authDomain: "conniem-re1-re5-tutor.firebaseapp.com",
+    projectId: "conniem-re1-re5-tutor",
+    storageBucket: "conniem-re1-re5-tutor.firebasestorage.app",
+    messagingSenderId: "382570100324",
+    appId: "1:382570100324:web:db724f09307cea19171171"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(e.target));
+        data.status = "pending";
+        data.submittedAt = serverTimestamp();
+        try {
+          await addDoc(collection(db, "enrollments"), data);
+          alert("Enrollment submitted! ConnieM will contact you within 24–48 hours.");
+          e.target.reset();
+        } catch (err) {
+          alert("Something went wrong. Please try again.");
+          console.error(err);
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
