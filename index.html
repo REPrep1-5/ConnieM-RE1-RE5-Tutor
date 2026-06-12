@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ConnieM Private Tutor — RE1 & RE5 Regulatory Exam Preparation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════════
+   DESIGN SYSTEM — Navy · Gold · Ivory
+   Inspired by Oxford Tutors, Revolution Prep, Alchemy Tuition
+═══════════════════════════════════════════════════ */
+:root{
+  /* Primary — Deep Navy (trust, authority, academic prestige) */
+  --navy-950:#06111f;
+  --navy-900:#0a1929;
+  --navy-800:#0d2137;
+  --navy-700:#122847;
+  --navy-600:#1a3a5c;
+  --navy-500:#1e4976;
+
+  /* Secondary — Champagne Gold (achievement, excellence) */
+  --gold-700:#8a6820;
+  --gold-600:#a87d28;
+  --gold-500:#c49432;
+  --gold-400:#d4a840;
+  --gold-300:#e2bf60;
+  --gold-200:#efd494;
+  --gold-100:#f8eecd;
+  --gold-50:#fdf8ec;
+
+  /* Neutral Ivory (warm, readable, premium) */
+  --ivory-100:#fefcf7;
+  --ivory-200:#fbf6ed;
+  --ivory-300:#f5edd8;
+  --ivory-400:#ecdcc0;
+  --ivory-500:#dcc9a0;
+
+  /* Functional */
+  --white:#ffffff;
+  --text-dark:#0a1929;
+  --text-mid:#2c4a6b;
+  --text-muted:#5c7a9a;
+  --text-light:#8fa8c4;
+  --border-light:#dde8f0;
+  --border-mid:#c4d4e4;
+  --success:#1a6b3c;
+  --success-bg:#d4f5e3;
+  --error:#8b1a1a;
+  --error-bg:#fde8e8;
+  --warning-bg:#fff8e6;
+
+  /* Shadows */
+  --shadow-sm:0 2px 8px rgba(10,25,41,0.08);
+  --shadow-md:0 4px 20px rgba(10,25,41,0.12);
+  --shadow-lg:0 12px 48px rgba(10,25,41,0.18);
+  --shadow-gold:0 4px 20px rgba(196,148,50,0.25);
+}
+
+*, *::before, *::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'DM Sans',sans-serif;background:var(--ivory-100);color:var(--text-dark);overflow-x:hidden;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;font-family:inherit;border:none;background:none;}
+input,select,textarea{font-family:inherit;}
+img{max-width:100%;}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--navy-900);}
+::-webkit-scrollbar-thumb{background:var(--gold-400);border-radius:3px;}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(196,148,50,.4);}50%{box-shadow:0 0 0 10px rgba(196,148,50,0);}}
+@keyframes shimmer{0%{background-position:-400px 0;}100%{background-position:400px 0;}}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+.anim-up{opacity:0;animation:fadeUp .6s ease forwards;}
+.anim-up:nth-child(2){animation-delay:.1s;}
+.anim-up:nth-child(3){animation-delay:.2s;}
+.anim-up:nth-child(4){animation-delay:.3s;}
+.anim-up:nth-child(5){animation-delay:.4s;}
+.anim-up:nth-child(6){animation-delay:.5s;}
+
+/* ─── TYPOGRAPHY ─── */
+.serif{font-family:'Cormorant Garamond',serif;}
+h1,h2,h3,.h-serif{font-family:'Cormorant Garamond',serif;}
+.mono{font-family:'DM Mono',monospace;}
+
+/* ─── LAYOUT ─── */
+.container{max-width:1180px;margin:0 auto;padding:0 1.5rem;}
+.section{padding:80px 0;}
+
+/* ─── NAV ─── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:9000;
+  background:rgba(10,25,41,0.98);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(196,148,50,.2);}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 1.5rem;
+  display:flex;align-items:center;justify-content:space-between;height:66px;}
+.nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer;}
+.nav-logo-crest{width:42px;height:42px;border-radius:10px;
+  background:linear-gradient(145deg,var(--gold-400),var(--gold-600));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--navy-900);
+  box-shadow:var(--shadow-gold);}
+.nav-logo-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--white);letter-spacing:.3px;}
+.nav-logo-name span{color:var(--gold-300);}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-link{padding:7px 16px;border-radius:8px;font-size:13.5px;font-weight:500;
+  color:rgba(255,255,255,.65);transition:all .2s;letter-spacing:.2px;}
+.nav-link:hover,.nav-link.active{background:rgba(196,148,50,.12);color:var(--gold-200);}
+.nav-badge{background:rgba(196,148,50,.15);border:1px solid rgba(196,148,50,.3);
+  color:var(--gold-200);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;
+  margin-left:4px;letter-spacing:.5px;vertical-align:middle;}
+.btn-nav-cta{padding:9px 24px;border-radius:8px;font-size:13.5px;font-weight:700;
+  background:linear-gradient(135deg,var(--gold-400),var(--gold-600));
+  color:var(--navy-900);letter-spacing:.3px;transition:all .2s;border:none;}
+.btn-nav-cta:hover{transform:translateY(-1px);box-shadow:var(--shadow-gold);}
+
+/* ─── BUTTONS ─── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;
+  transition:all .25s;cursor:pointer;border:none;letter-spacing:.2px;}
+.btn-gold{background:linear-gradient(135deg,var(--gold-400),var(--gold-600));color:var(--navy-900);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:var(--shadow-gold);}
+.btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.3);}
+.btn-outline:hover{border-color:var(--gold-300);color:var(--gold-200);}
+.btn-navy{background:var(--navy-800);color:var(--white);border:1px solid var(--navy-600);}
+.btn-navy:hover{background:var(--navy-700);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--text-mid);border:1.5px solid var(--border-mid);}
+.btn-ghost:hover{border-color:var(--gold-400);color:var(--gold-600);}
+.btn-sm{padding:9px 22px;font-size:13px;}
+.btn-lg{padding:16px 42px;font-size:16px;}
+.btn-full{width:100%;}
+.btn-success{background:var(--success-bg);color:var(--success);border:1px solid rgba(26,107,60,.2);}
+.btn-danger{background:var(--error-bg);color:var(--error);border:1px solid rgba(139,26,26,.2);}
+
+/* ─── SECTION LABELS ─── */
+.section-tag{display:inline-flex;align-items:center;gap:6px;
+  background:var(--gold-100);border:1px solid var(--gold-200);
+  color:var(--gold-700);padding:5px 16px;border-radius:100px;
+  font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+  margin-bottom:1.2rem;}
+.section-tag::before{content:'';width:6px;height:6px;background:var(--gold-500);border-radius:50%;}
+.section-title{font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--navy-900);
+  line-height:1.15;margin-bottom:1rem;}
+.section-title-light{color:var(--white);}
+.section-title em{color:var(--gold-500);font-style:italic;}
+.section-sub{font-size:16px;color:var(--text-muted);line-height:1.75;max-width:580px;}
+.section-sub-light{color:rgba(255,255,255,.6);}
+
+/* ─── HERO ─── */
+.hero{background:var(--navy-900);min-height:100vh;
+  display:flex;align-items:center;padding-top:66px;
+  position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(196,148,50,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(196,148,50,.04) 1px,transparent 1px);
+  background-size:72px 72px;}
+.hero-glow1{position:absolute;top:-100px;right:-100px;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(196,148,50,.12) 0%,transparent 70%);border-radius:50%;}
+.hero-glow2{position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(30,73,118,.5) 0%,transparent 70%);border-radius:50%;}
+.hero-line{position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold-500),transparent);}
+.hero-content{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:4rem 1.5rem;
+  display:grid;grid-template-columns:1fr 430px;gap:5rem;align-items:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(196,148,50,.3);color:var(--gold-300);
+  padding:6px 18px;border-radius:100px;font-size:12.5px;font-weight:500;
+  letter-spacing:.5px;margin-bottom:1.8rem;
+  background:rgba(196,148,50,.06);}
+.hero-title{font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5.5vw,5rem);font-weight:700;
+  color:var(--white);line-height:1.08;margin-bottom:1.6rem;}
+.hero-title em{color:var(--gold-400);font-style:italic;}
+.hero-subtitle{font-size:17px;color:rgba(255,255,255,.6);line-height:1.8;
+  margin-bottom:2.5rem;max-width:540px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:3rem;}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);
+  border:1px solid rgba(196,148,50,.2);border-radius:14px;overflow:hidden;}
+.hero-stat{padding:18px;text-align:center;
+  border-right:1px solid rgba(196,148,50,.15);}
+.hero-stat:last-child{border-right:none;}
+.hero-stat-val{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;
+  color:var(--gold-300);line-height:1;}
+.hero-stat-label{font-size:11px;color:rgba(255,255,255,.4);
+  text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+.hero-divider{width:1px;background:rgba(196,148,50,.2);}
+
+/* ─── HERO CARD (Enrollment) ─── */
+.hero-card{background:var(--white);border-radius:20px;padding:2.2rem;
+  box-shadow:var(--shadow-lg);border:1px solid var(--border-light);}
+.hero-card-header{margin-bottom:1.6rem;padding-bottom:1.2rem;
+  border-bottom:1px solid var(--border-light);}
+.hero-card-header h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;
+  font-weight:700;color:var(--navy-900);margin-bottom:4px;}
+.hero-card-header p{font-size:13px;color:var(--text-muted);}
+
+/* ─── FORM ELEMENTS ─── */
+.form-group{margin-bottom:1rem;}
+.form-label{display:block;font-size:12.5px;font-weight:600;
+  color:var(--text-mid);margin-bottom:5px;letter-spacing:.3px;text-transform:uppercase;}
+.form-input{width:100%;padding:11px 14px;border:1.5px solid var(--border-light);
+  border-radius:9px;font-size:14px;color:var(--text-dark);
+  background:var(--ivory-200);transition:border-color .2s,box-shadow .2s;}
+.form-input:focus{outline:none;border-color:var(--gold-400);
+  box-shadow:0 0 0 3px rgba(196,148,50,.1);background:var(--white);}
+.form-input.error{border-color:var(--error);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-error{font-size:12px;color:var(--error);margin-top:4px;}
+.form-note{font-size:12px;color:var(--text-light);text-align:center;margin-top:12px;line-height:1.6;}
+.form-note strong{color:var(--gold-600);}
+
+/* ─── CARDS ─── */
+.card{background:var(--white);border:1px solid var(--border-light);
+  border-radius:18px;padding:2rem;transition:transform .25s,box-shadow .25s;}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.card-navy{background:var(--navy-800);border-color:rgba(196,148,50,.15);}
+.card-gold-border{border-top:3px solid var(--gold-400);}
+
+/* ─── BADGE ─── */
+.badge{display:inline-block;padding:4px 14px;border-radius:6px;
+  font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;}
+.badge-re1{background:var(--gold-400);color:var(--navy-900);}
+.badge-re5{background:var(--navy-600);color:var(--white);}
+.badge-pending{background:var(--warning-bg);color:#8a6820;border:1px solid var(--gold-200);}
+.badge-approved{background:var(--success-bg);color:var(--success);border:1px solid rgba(26,107,60,.2);}
+.badge-declined{background:var(--error-bg);color:var(--error);border:1px solid rgba(139,26,26,.2);}
+
+/* ─── EXAM DETAILS ─── */
+.exam-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1.2rem 0;}
+.exam-detail-item{background:var(--ivory-200);border:1px solid var(--border-light);
+  border-radius:9px;padding:12px 14px;}
+.exam-detail-val{font-size:1.1rem;font-weight:700;color:var(--navy-800);}
+.exam-detail-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;
+  letter-spacing:.8px;margin-top:2px;}
+
+/* ─── TOPIC LIST ─── */
+.topic-dot{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;}
+.topic-dot::before{content:'';width:6px;height:6px;background:var(--gold-400);
+  border-radius:50%;flex-shrink:0;margin-top:7px;}
+.topic-dot span{font-size:13.5px;color:var(--text-mid);line-height:1.5;}
+
+/* ─── ACCORDION ─── */
+.accordion{background:var(--white);border:1px solid var(--border-light);
+  border-radius:14px;overflow:hidden;margin-bottom:10px;}
+.acc-header{width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 1.5rem;background:none;border:none;text-align:left;cursor:pointer;
+  transition:background .2s;}
+.acc-header:hover{background:var(--ivory-200);}
+.acc-header.open{background:var(--ivory-200);}
+.acc-title-wrap{display:flex;align-items:center;gap:14px;}
+.acc-num{background:var(--navy-900);color:var(--gold-300);padding:4px 10px;
+  border-radius:6px;font-size:11px;font-weight:700;font-family:'DM Mono',monospace;
+  flex-shrink:0;}
+.acc-title-text{font-size:15px;font-weight:600;color:var(--navy-900);}
+.acc-subtitle{font-size:12px;color:var(--text-muted);margin-top:2px;}
+.acc-icon{font-size:1rem;color:var(--gold-500);transition:transform .3s;flex-shrink:0;}
+.acc-icon.open{transform:rotate(180deg);}
+.acc-body{display:none;padding:0 1.5rem 1.5rem;animation:slideDown .3s ease;}
+.acc-body.open{display:block;}
+
+/* ─── STUDY CONTENT ─── */
+.study-section{margin-top:1.4rem;}
+.study-section h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;
+  color:var(--navy-900);margin-bottom:.5rem;}
+.study-section-content{background:var(--ivory-200);border-left:3px solid var(--gold-400);
+  border-radius:0 10px 10px 0;padding:1rem 1.1rem;font-size:13.5px;
+  color:var(--text-dark);line-height:1.85;white-space:pre-line;}
+.law-ref{background:var(--gold-50);border-left:3px solid var(--gold-400);
+  border-radius:0 8px 8px 0;padding:8px 12px;font-size:12.5px;
+  color:var(--gold-700);font-style:italic;margin-top:.8rem;}
+.exam-tip{background:#eef6ff;border-left:3px solid #4a90d9;
+  border-radius:0 8px 8px 0;padding:8px 12px;font-size:12.5px;
+  color:#1a4a7a;margin-top:.5rem;}
+
+/* ─── PRACTICE QUESTIONS ─── */
+.pq-wrap{margin-top:1.5rem;}
+.pq-heading{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;
+  color:var(--navy-900);margin-bottom:1rem;}
+.pq-item{background:var(--ivory-100);border:1px solid var(--border-light);
+  border-radius:12px;padding:1.1rem;margin-bottom:.8rem;}
+.pq-question{font-size:14px;font-weight:600;color:var(--navy-900);margin-bottom:.7rem;line-height:1.5;}
+.pq-opts{list-style:none;}
+.pq-opt{width:100%;text-align:left;padding:9px 14px;margin-bottom:5px;
+  border:1.5px solid var(--border-light);border-radius:8px;
+  background:var(--white);font-size:13.5px;color:var(--text-dark);
+  transition:all .15s;cursor:pointer;}
+.pq-opt:hover:not(:disabled){background:var(--gold-50);border-color:var(--gold-300);color:var(--navy-900);}
+.pq-opt.correct{background:var(--success-bg);border-color:var(--success);color:var(--success);font-weight:600;}
+.pq-opt.wrong{background:var(--error-bg);border-color:var(--error);color:var(--error);}
+.pq-explanation{background:var(--success-bg);border-left:3px solid var(--success);
+  border-radius:0 8px 8px 0;padding:8px 12px;font-size:12.5px;color:var(--success);
+  margin-top:.5rem;display:none;}
+
+/* ─── MOCK EXAM ─── */
+.mock-header{display:flex;align-items:center;justify-content:space-between;
+  padding:1.5rem;background:var(--navy-900);border-radius:14px 14px 0 0;}
+.mock-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--white);}
+.mock-timer{font-family:'DM Mono',monospace;font-size:1.1rem;font-weight:500;
+  color:var(--gold-300);background:rgba(196,148,50,.1);
+  padding:8px 18px;border-radius:8px;border:1px solid rgba(196,148,50,.2);}
+.mock-timer.urgent{color:#ff6b6b;border-color:rgba(255,107,107,.3);
+  background:rgba(255,107,107,.1);}
+.mock-progress-bar{height:4px;background:var(--border-light);}
+.mock-progress-fill{height:100%;background:linear-gradient(90deg,var(--gold-400),var(--gold-600));
+  transition:width .3s;}
+.mock-body{padding:2rem;background:var(--white);border-radius:0 0 14px 14px;}
+.mock-q-num{font-size:11px;color:var(--text-muted);text-transform:uppercase;
+  letter-spacing:1px;margin-bottom:.5rem;font-family:'DM Mono',monospace;}
+.mock-q-text{font-size:16px;font-weight:600;color:var(--navy-900);
+  line-height:1.6;margin-bottom:1.2rem;}
+.mock-opt{display:block;width:100%;text-align:left;padding:13px 18px;
+  margin-bottom:8px;border:2px solid var(--border-light);border-radius:10px;
+  background:var(--ivory-100);font-size:14px;color:var(--text-dark);
+  transition:all .2s;cursor:pointer;}
+.mock-opt:hover:not(:disabled){border-color:var(--gold-400);background:var(--gold-50);}
+.mock-opt.selected{border-color:var(--gold-400);background:var(--gold-50);
+  color:var(--navy-900);font-weight:500;}
+.mock-opt.correct-ans{border-color:var(--success);background:var(--success-bg);
+  color:var(--success);font-weight:700;}
+.mock-opt.wrong-ans{border-color:var(--error);background:var(--error-bg);color:var(--error);}
+.mock-nav{display:flex;align-items:center;justify-content:space-between;
+  margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--border-light);}
+.mock-counter{font-size:13px;color:var(--text-muted);}
+.mock-results{padding:2.5rem;text-align:center;}
+.score-ring{width:150px;height:150px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin:0 auto 1.5rem;border:6px solid;}
+.score-ring.pass{border-color:var(--success);background:var(--success-bg);}
+.score-ring.fail{border-color:var(--error);background:var(--error-bg);}
+.score-pct{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;line-height:1;}
+.score-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-top:2px;}
+
+/* ─── TIPS SECTION ─── */
+.tips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2.5rem;}
+.tip-card{background:rgba(255,255,255,.04);border:1px solid rgba(196,148,50,.15);
+  border-radius:14px;padding:1.5rem;display:flex;gap:14px;
+  transition:border-color .2s,background .2s;}
+.tip-card:hover{border-color:rgba(196,148,50,.4);background:rgba(255,255,255,.06);}
+.tip-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;
+  color:var(--gold-400);line-height:1;flex-shrink:0;width:44px;}
+.tip-content h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:.3rem;}
+.tip-content p{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.65;}
+
+/* ─── LEGISLATION TABLE ─── */
+.leg-table{width:100%;border-collapse:collapse;margin-top:1rem;}
+.leg-table th{padding:10px 14px;background:var(--navy-900);color:var(--gold-300);
+  font-size:12px;text-transform:uppercase;letter-spacing:.8px;text-align:left;
+  font-weight:600;}
+.leg-table td{padding:10px 14px;font-size:13.5px;border-bottom:1px solid var(--border-light);
+  vertical-align:top;line-height:1.6;}
+.leg-table tr:nth-child(even) td{background:var(--ivory-200);}
+.leg-table tr:hover td{background:var(--gold-50);}
+.leg-code{font-family:'DM Mono',monospace;font-size:12px;background:var(--gold-100);
+  color:var(--gold-700);padding:2px 8px;border-radius:4px;white-space:nowrap;}
+
+/* ─── ADMIN ─── */
+.admin-table{width:100%;border-collapse:collapse;background:var(--white);
+  border-radius:14px;overflow:hidden;border:1px solid var(--border-light);}
+.admin-table th{padding:12px 16px;background:var(--navy-900);color:var(--gold-200);
+  font-size:12px;text-transform:uppercase;letter-spacing:.8px;text-align:left;
+  font-weight:600;white-space:nowrap;}
+.admin-table td{padding:12px 16px;font-size:13.5px;border-bottom:1px solid var(--border-light);
+  vertical-align:middle;}
+.admin-table tr:hover td{background:var(--ivory-200);}
+.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem;}
+.admin-stat{background:var(--white);border:1px solid var(--border-light);
+  border-radius:14px;padding:1.3rem;text-align:center;}
+.admin-stat-val{font-family:'Cormorant Garamond',serif;font-size:2.5rem;
+  font-weight:700;color:var(--navy-900);line-height:1;}
+.admin-stat-label{font-size:12px;color:var(--text-muted);margin-top:3px;}
+
+/* ─── OFFER CARDS ─── */
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem;}
+.offer-card{background:var(--white);border:1px solid var(--border-light);
+  border-radius:16px;padding:1.8rem;position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;}
+.offer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold-400),var(--gold-200));
+  transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.offer-card:hover::before{transform:scaleX(1);}
+.offer-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.offer-icon{font-size:2rem;margin-bottom:1rem;}
+.offer-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;
+  font-weight:700;color:var(--navy-900);margin-bottom:.4rem;}
+.offer-card p{font-size:13.5px;color:var(--text-muted);line-height:1.65;}
+.offer-lock{position:absolute;top:1rem;right:1rem;background:var(--gold-100);
+  border:1px solid var(--gold-200);color:var(--gold-700);
+  padding:3px 10px;border-radius:100px;font-size:11px;font-weight:600;}
+
+/* ─── LOCKED OVERLAY ─── */
+.locked-overlay{background:var(--white);border:2px dashed var(--border-mid);
+  border-radius:16px;padding:4rem 2rem;text-align:center;position:relative;}
+.locked-overlay::before{content:'';position:absolute;inset:0;border-radius:14px;
+  background:repeating-linear-gradient(45deg,transparent,transparent 12px,
+    rgba(196,148,50,.02) 12px,rgba(196,148,50,.02) 24px);}
+.locked-icon{font-size:3rem;margin-bottom:1rem;}
+.locked-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;
+  font-weight:700;color:var(--navy-900);margin-bottom:.5rem;}
+.locked-desc{color:var(--text-muted);max-width:420px;margin:0 auto 1.5rem;line-height:1.7;}
+
+/* ─── TAB NAV ─── */
+.tab-nav{display:flex;gap:4px;background:var(--ivory-200);
+  border:1px solid var(--border-light);border-radius:12px;padding:4px;
+  margin-bottom:2rem;width:fit-content;}
+.tab-btn{padding:9px 24px;border-radius:9px;border:none;
+  font-size:13.5px;font-weight:600;color:var(--text-muted);
+  transition:all .2s;background:none;}
+.tab-btn.active{background:var(--navy-900);color:var(--gold-200);}
+
+/* ─── SUCCESS STATE ─── */
+.success-state{text-align:center;padding:2.5rem 1rem;}
+.success-icon{font-size:3.5rem;margin-bottom:1rem;}
+.success-title{font-family:'Cormorant Garamond',serif;font-size:2rem;
+  font-weight:700;color:var(--navy-900);margin-bottom:.5rem;}
+.success-desc{color:var(--text-muted);line-height:1.7;max-width:400px;margin:0 auto 1.5rem;}
+
+/* ─── TOAST ─── */
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;z-index:99999;
+  padding:14px 22px;border-radius:12px;font-size:14px;font-weight:500;
+  max-width:360px;line-height:1.5;
+  animation:fadeUp .3s ease;box-shadow:var(--shadow-lg);}
+.toast-success{background:var(--navy-900);color:var(--white);
+  border-left:4px solid var(--gold-400);}
+.toast-error{background:var(--error-bg);color:var(--error);
+  border-left:4px solid var(--error);}
+
+/* ─── FOOTER ─── */
+.footer{background:var(--navy-950);border-top:1px solid rgba(196,148,50,.1);
+  padding:2.5rem 1.5rem;}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;
+  align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+  color:var(--gold-300);font-weight:600;}
+.footer-copy{font-size:12.5px;color:rgba(255,255,255,.3);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12.5px;color:rgba(255,255,255,.3);transition:color .2s;}
+.footer-links a:hover{color:var(--gold-300);}
+
+/* ─── MODAL ─── */
+.modal-bg{position:fixed;inset:0;background:rgba(6,17,31,.7);z-index:9998;
+  display:flex;align-items:center;justify-content:center;padding:1rem;
+  animation:fadeIn .2s ease;}
+.modal-card{background:var(--white);border-radius:20px;max-width:460px;
+  width:100%;box-shadow:var(--shadow-lg);overflow:hidden;}
+.modal-header{background:var(--navy-900);padding:1.5rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;}
+.modal-header-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;
+  color:var(--white);font-weight:700;}
+.modal-close{color:rgba(255,255,255,.5);font-size:1.3rem;
+  transition:color .2s;padding:4px;}
+.modal-close:hover{color:var(--gold-300);}
+.modal-body{padding:2rem;}
+
+/* ─── PAGES ─── */
+.page{display:none;padding-top:66px;min-height:100vh;}
+.page.active{display:block;}
+
+/* ─── FEATURE LIST (About) ─── */
+.feature-list{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;}
+.feature-item{display:flex;gap:14px;align-items:flex-start;}
+.feature-icon{width:44px;height:44px;border-radius:10px;
+  background:rgba(196,148,50,.12);border:1px solid rgba(196,148,50,.2);
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.feature-item h4{font-size:15px;font-weight:600;color:var(--white);margin-bottom:3px;}
+.feature-item p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.6;}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){
+  .hero-content,.enroll-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .offer-grid{grid-template-columns:1fr 1fr;}
+  .tips-grid{grid-template-columns:1fr;}
+  .admin-stats{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .offer-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .hero-stats{grid-template-columns:1fr;}
+  .admin-stats{grid-template-columns:1fr 1fr;}
+  .tab-nav{flex-wrap:wrap;}
+  .tips-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════ -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')">
+      <div class="nav-logo-crest">CM</div>
+      <div class="nav-logo-name">ConnieM <span>Private Tutor</span></div>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link active" id="nav-home" onclick="showPage('home')">Home</a>
+      <a class="nav-link" id="nav-about" onclick="showPage('about')">RE Exams</a>
+      <a class="nav-link" id="nav-tips" onclick="showPage('tips')">Exam Tips</a>
+      <a class="nav-link" id="nav-study" onclick="showPage('study')">Study Guide <span class="nav-badge" id="nav-study-badge">🔒</span></a>
+      <a class="nav-link" id="nav-mock" onclick="showPage('mock')">Mock Exam <span class="nav-badge" id="nav-mock-badge">🔒</span></a>
+      <a class="nav-link" id="nav-admin" onclick="openAdminModal()" style="display:none;">Admin</a>
+    </div>
+    <button class="btn-nav-cta" id="nav-enroll-btn" onclick="showPage('enroll')">Enroll Now</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow1"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-line"></div>
+    <div class="hero-content">
+      <div class="anim-up">
+        <div class="hero-eyebrow">★ Sayung Study Series — South Africa's FAIS Exam Preparation</div>
+        <h1 class="hero-title">Pass Your <em>RE1</em> or<br/><em>RE5</em> Exam With<br/>Confidence</h1>
+        <p class="hero-subtitle">Expert-curated study guides, comprehensive topic breakdowns, timed mock examinations and personalised tutoring — built for South African financial services professionals who need to pass first time.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-gold btn-lg" onclick="showPage('enroll')">Enroll Today — It's Free</button>
+          <button class="btn btn-outline btn-lg" onclick="showPage('about')">Learn About the Exams →</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="hero-stat-val">RE1</div><div class="hero-stat-label">Key Individuals<br/>80 Questions</div></div>
+          <div class="hero-stat"><div class="hero-stat-val">RE5</div><div class="hero-stat-label">Representatives<br/>50 Questions</div></div>
+          <div class="hero-stat"><div class="hero-stat-val">65%</div><div class="hero-stat-label">Pass Mark<br/>Required</div></div>
+        </div>
+      </div>
+
+      <!-- Quick Enroll Card -->
+      <div class="hero-card anim-up" id="heroCardWrap">
+        <div class="hero-card-header">
+          <h3>Quick Enrollment</h3>
+          <p>Get access to study materials once your enrollment is approved by ConnieM.</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Full Names</label>
+          <input type="text" class="form-input" id="hFirstName" placeholder="e.g. Thandi"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Surname</label>
+          <input type="text" class="form-input" id="hLastName" placeholder="e.g. Dlamini"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cellphone Number</label>
+          <input type="tel" class="form-input" id="hPhone" placeholder="e.g. 082 555 0000"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" id="hEmail" placeholder="e.g. thandi@email.com"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Exam I'm Preparing For</label>
+          <select class="form-input" id="hExam">
+            <option value="">Please select...</option>
+            <option>RE1 — Key Individuals</option>
+            <option>RE5 — Representatives</option>
+            <option>Both RE1 and RE5</option>
+          </select>
+        </div>
+        <button class="btn btn-gold btn-full" style="margin-top:6px;" onclick="submitHeroForm()">Submit Enrollment →</button>
+        <p class="form-note">Reviewed personally by <strong>ConnieM Private Tutor</strong>. You will be notified upon approval within 24–48 hours.</p>
+      </div>
+      <div class="hero-card" id="heroSuccessCard" style="display:none;">
+        <div class="success-state">
+          <div class="success-icon">🎓</div>
+          <div class="success-title">Enrollment Submitted!</div>
+          <p class="success-desc">Thank you! Your application has been received and is awaiting approval by <strong>ConnieM Private Tutor</strong>. You will be contacted via your preferred method within 24–48 hours.</p>
+          <button class="btn btn-ghost btn-sm" onclick="showPage('tips')">Explore Free Exam Tips →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE OFFER -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="section-tag">Study Materials</div>
+      <h2 class="section-title">Everything You Need to <em>Pass First Time</em></h2>
+      <p class="section-sub">Our Sayung Study Series provides a complete suite of resources. Study guides and mock exams are unlocked upon approval of your enrollment.</p>
+      <div class="offer-grid" style="margin-top:2.5rem;">
+        <div class="offer-card anim-up">
+          <div class="offer-icon">📚</div>
+          <h3>Comprehensive Study Guides</h3>
+          <p>Detailed chapter-by-chapter study guides covering every RE1 and RE5 topic with definitions, legal references, legislation tables and worked examples.</p>
+          <span class="offer-lock">🔒 On Enrollment</span>
+        </div>
+        <div class="offer-card anim-up">
+          <div class="offer-icon">📝</div>
+          <h3>Mock Examinations</h3>
+          <p>Full-length timed mock exams simulating real Moonstone exam conditions — with instant scoring, answer review and detailed explanations.</p>
+          <span class="offer-lock">🔒 On Enrollment</span>
+        </div>
+        <div class="offer-card anim-up">
+          <div class="offer-icon">❓</div>
+          <h3>Topic Practice Questions</h3>
+          <p>5 exam-style questions per topic with full explanations — test your understanding immediately after studying each section.</p>
+          <span class="offer-lock">🔒 On Enrollment</span>
+        </div>
+        <div class="offer-card anim-up">
+          <div class="offer-icon">⚖️</div>
+          <h3>Legislation Reference Tables</h3>
+          <p>Complete tables of all FAIS legislation, Board Notices, key dates, timeframes and role-player responsibilities — always at your fingertips.</p>
+          <span class="offer-lock">🔒 On Enrollment</span>
+        </div>
+        <div class="offer-card anim-up">
+          <div class="offer-icon">💬</div>
+          <h3>Personal Tutor Support</h3>
+          <p>Direct access to ConnieM for personalised guidance, question clarification and structured study planning via WhatsApp or email.</p>
+          <span class="offer-lock">🔒 On Enrollment</span>
+        </div>
+        <div class="offer-card anim-up">
+          <div class="offer-icon">✅</div>
+          <h3>10 Expert Exam Tips</h3>
+          <p>Free for everyone — proven preparation strategies developed from years of RE exam coaching experience. Available immediately on the Exam Tips page.</p>
+          <button class="btn btn-ghost btn-sm" style="margin-top:1rem;font-size:12px;" onclick="showPage('tips')">View Free Tips →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section style="background:linear-gradient(135deg,var(--navy-800),var(--navy-600));padding:60px 1.5rem;text-align:center;">
+    <div style="max-width:600px;margin:0 auto;">
+      <div class="section-tag" style="background:rgba(196,148,50,.15);border-color:rgba(196,148,50,.3);color:var(--gold-200);margin-bottom:1.2rem;">Start Your Journey Today</div>
+      <h2 class="section-title section-title-light" style="margin-bottom:.8rem;">Ready to Pass Your RE Exam?</h2>
+      <p style="color:rgba(255,255,255,.6);margin-bottom:2rem;line-height:1.75;">Submit your enrollment. ConnieM personally reviews every application and contacts you within 24–48 hours upon approval. Full study access is unlocked immediately after approval.</p>
+      <button class="btn btn-gold btn-lg" onclick="showPage('enroll')">📋 Submit Enrollment — Free</button>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: ABOUT RE EXAMS
+═══════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <section style="background:var(--navy-900);padding:70px 0 50px;">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(196,148,50,.15);border-color:rgba(196,148,50,.25);color:var(--gold-200);">FSCA Regulatory Examinations</div>
+      <h1 class="section-title section-title-light">RE1 &amp; RE5 — <em>Everything You Need to Know</em></h1>
+      <p class="section-sub section-sub-light">The Regulatory Examinations are prescribed under Board Notice 194 of 2017 (FAIS Act). They are administered exclusively by Moonstone Business School and are mandatory for all financial services professionals in South Africa.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+
+        <!-- RE1 CARD -->
+        <div class="card card-gold-border" style="border-top-color:var(--gold-400);">
+          <span class="badge badge-re1" style="margin-bottom:1rem;">RE1 — REGULATORY EXAM 1</span>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--navy-900);margin-bottom:.3rem;">Key Individuals</h2>
+          <p style="font-size:12px;color:var(--gold-600);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;">For FSPs &amp; Key Individuals — All Categories (I, II, IIA, III, IV)</p>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:1.2rem;">The RE1 is mandatory for all Key Individuals (KIs) — natural persons responsible for managing and overseeing an FSP's financial services activities. It covers the regulatory framework from a management and governance perspective, including licensing, fit and proper requirements, compliance management, GCOC, FICA and AML obligations.</p>
+          <div class="exam-detail-grid">
+            <div class="exam-detail-item"><div class="exam-detail-val">80 Questions</div><div class="exam-detail-label">Exam Format</div></div>
+            <div class="exam-detail-item"><div class="exam-detail-val">65% (52/80)</div><div class="exam-detail-label">Pass Mark</div></div>
+            <div class="exam-detail-item"><div class="exam-detail-val">Moonstone</div><div class="exam-detail-label">Exam Centre</div></div>
+            <div class="exam-detail-item"><div class="exam-detail-val">BN 194/2017</div><div class="exam-detail-label">Legal Basis</div></div>
+          </div>
+          <p style="font-size:12px;color:var(--gold-600);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:.8rem;">Topics Covered:</p>
+          <div class="topic-dot"><span>The FAIS Act as a Regulatory Framework (History, FSR Act, Twin Peaks)</span></div>
+          <div class="topic-dot"><span>Financial Products and Financial Services (Advice vs Intermediary)</span></div>
+          <div class="topic-dot"><span>Licensing of FSPs — Sections 7, 8, 9, 13; FSP Categories I–IV</span></div>
+          <div class="topic-dot"><span>Maintaining the Licence (Material changes, 15-day rule)</span></div>
+          <div class="topic-dot"><span>Operating as a Key Individual — Duties and FSCA Approval</span></div>
+          <div class="topic-dot"><span>Fit and Proper Requirements — BN 194/2017 (Four Pillars)</span></div>
+          <div class="topic-dot"><span>Appointment and Management of Representatives</span></div>
+          <div class="topic-dot"><span>Compliance Function and Compliance Officers (BN 127/2010)</span></div>
+          <div class="topic-dot"><span>Record Keeping — 5-year retention; FAIS and FICA records</span></div>
+          <div class="topic-dot"><span>General Code of Conduct — BN 80/2003 (FNA, disclosure, COI)</span></div>
+          <div class="topic-dot"><span>FICA — CDD/KYC, CTR (R49 999/3 days), STR, PEPs, Tipping Off</span></div>
+          <div class="topic-dot"><span>Anti-Money Laundering — 3 Stages (Placement, Layering, Integration)</span></div>
+          <div class="topic-dot"><span>Debarment — Grounds, Procedure, Appeal to FST</span></div>
+          <div class="topic-dot"><span>FAIS Ombud — Jurisdiction, Powers, R3.5M Compensation Limit</span></div>
+        </div>
+
+        <!-- RE5 CARD -->
+        <div class="card" style="border-top:3px solid var(--navy-600);">
+          <span class="badge badge-re5" style="margin-bottom:1rem;">RE5 — REGULATORY EXAM 5</span>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--navy-900);margin-bottom:.3rem;">Representatives</h2>
+          <p style="font-size:12px;color:var(--navy-600);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;">For All Representatives — All Categories of FSPs</p>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:1.2rem;">The RE5 is mandatory for all Representatives who render financial services to clients on behalf of an FSP. It covers the regulatory framework, your daily GCOC obligations, financial products, FICA compliance, the FAIS Ombud and debarment — from an operational representative's perspective.</p>
+          <div class="exam-detail-grid">
+            <div class="exam-detail-item"><div class="exam-detail-val">50 Questions</div><div class="exam-detail-label">Exam Format</div></div>
+            <div class="exam-detail-item"><div class="exam-detail-val">65% (33/50)</div><div class="exam-detail-label">Pass Mark</div></div>
+            <div class="exam-detail-item"><div class="exam-detail-val">Moonstone</div><div class="exam-detail-label">Exam Centre</div></div>
+            <div class="exam-detail-item"><div class="exam-detail-val">BN 194/2017</div><div class="exam-detail-label">Legal Basis</div></div>
+          </div>
+          <p style="font-size:12px;color:var(--navy-600);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:.8rem;">Topics Covered:</p>
+          <div class="topic-dot"><span>The FAIS Act — Your Role as a Representative</span></div>
+          <div class="topic-dot"><span>Financial Products and Services You Are Authorised to Advise On</span></div>
+          <div class="topic-dot"><span>FSP Licensing — Your Contribution to Maintaining the Licence</span></div>
+          <div class="topic-dot"><span>Key Individuals — Understanding Their Role Over You</span></div>
+          <div class="topic-dot"><span>Fit and Proper Requirements — DOFA, Supervision, RE5 Exam</span></div>
+          <div class="topic-dot"><span>General Code of Conduct — Your Daily Obligations (FNA, Disclosure)</span></div>
+          <div class="topic-dot"><span>Specific Duties — Product Disclosures and Advice Records</span></div>
+          <div class="topic-dot"><span>Conflict of Interest Management — COI Policy, Disclosure</span></div>
+          <div class="topic-dot"><span>Custody of Client Funds — Separate Trust Accounts</span></div>
+          <div class="topic-dot"><span>FICA Compliance — CDD, CTR (R49 999), STR, PEPs, Tipping Off</span></div>
+          <div class="topic-dot"><span>Anti-Money Laundering — Stages, Red Flags, Terrorist Financing</span></div>
+          <div class="topic-dot"><span>Complaints Handling — Internal Process and FAIS Ombud</span></div>
+          <div class="topic-dot"><span>Debarment — Grounds, Procedure, Appeal to FST</span></div>
+        </div>
+      </div>
+
+      <!-- LEGISLATION TABLE -->
+      <div style="margin-top:3rem;">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--navy-900);margin-bottom:1rem;">Key Legislation &amp; Board Notices You Must Know</h3>
+        <div style="overflow-x:auto;">
+          <table class="leg-table">
+            <thead>
+              <tr>
+                <th style="width:200px;">Document</th>
+                <th>Subject Matter</th>
+                <th>What it Means for the Exam</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="leg-code">FAIS Act 37/2002</span></td><td>Primary legislation regulating financial advisory and intermediary services in South Africa</td><td>The foundation of both RE1 and RE5. Effective 30 Sept 2004 for licensing requirements.</td></tr>
+              <tr><td><span class="leg-code">FSR Act 9/2017</span></td><td>Created the 'twin peaks' model — FSCA (conduct) and Prudential Authority (soundness)</td><td>FSCA replaced FSB on 1 April 2018. 'Registrar' now = FSCA Commissioner. Created the FST.</td></tr>
+              <tr><td><span class="leg-code">BN 80/2003</span></td><td>General Code of Conduct (GCOC) for Authorised FSPs and Representatives</td><td>YOUR conduct standard. FNA, disclosures, advice records, COI, custody, advertising.</td></tr>
+              <tr><td><span class="leg-code">BN 194/2017</span></td><td>Current Fit and Proper Requirements — four pillars, RE exams, CPD, COB, PST</td><td>Prescribes ALL qualification/competence requirements including RE1 and RE5.</td></tr>
+              <tr><td><span class="leg-code">BN 127/2010</span></td><td>Approval requirements, duties and independence of Compliance Officers</td><td>CO must be FSCA-approved; independent; KI signs compliance reports (not the CO).</td></tr>
+              <tr><td><span class="leg-code">BN 81/2003</span></td><td>Rules governing FAIS Ombud proceedings</td><td>3-year prescription; free to complainants; maximum R3.5M award.</td></tr>
+              <tr><td><span class="leg-code">BN 82/2003</span></td><td>Reappointment of debarred representatives</td><td>Conditions for reinstatement after debarment once fit and proper requirements are met.</td></tr>
+              <tr><td><span class="leg-code">FICA 38/2001</span></td><td>Financial Intelligence Centre Act — CDD, CTR, STR, AML obligations</td><td>CTR = R49 999 / 3 days. STR = suspicion / as soon as possible. Tipping off = criminal offence.</td></tr>
+              <tr><td><span class="leg-code">FIC Notice 40/2022</span></td><td>Crypto assets declared as financial products under the FAIS Act</td><td>Crypto assets are financial products from 2023 — advice requires full FAIS compliance.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: EXAM TIPS
+═══════════════════════════════════════════════ -->
+<div class="page" id="page-tips">
+  <section style="background:var(--navy-900);padding:70px 0 50px;">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(196,148,50,.15);border-color:rgba(196,148,50,.25);color:var(--gold-200);">Free for Everyone</div>
+      <h1 class="section-title section-title-light">10 Expert Tips for Passing<br/>Your <em>RE Exam</em></h1>
+      <p class="section-sub section-sub-light">Proven preparation strategies from ConnieM Private Tutor. Follow these and maximise your chances of passing first time — for both RE1 and RE5.</p>
+    </div>
+  </section>
+  <section style="background:var(--navy-800);padding:60px 0;">
+    <div class="container">
+      <div class="tips-grid">
+        <div class="tip-card"><div class="tip-num">01</div><div class="tip-content"><h4>Master the Regulatory Structure First</h4><p>Before memorising details, understand the big picture: FAIS Act → FSR Act → GCOC → FICA. Know who does what and how all the legislation connects. Every detail fits into this framework.</p></div></div>
+        <div class="tip-card"><div class="tip-num">02</div><div class="tip-content"><h4>Memorise Critical Dates &amp; Timeframes</h4><p>Section 7 effective: 30 Sep 2004 | Material changes to FSCA: 15 days | CTR: 3 days | Records: 5 years | FSCA replaced FSB: 1 Apr 2018 | Debarment notification: 15 days. Make a flashcard.</p></div></div>
+        <div class="tip-card"><div class="tip-num">03</div><div class="tip-content"><h4>Know the Four Fit &amp; Proper Pillars</h4><p>Honesty &amp; Integrity, Competence, Operational Ability, Financial Soundness. For every scenario question, map the issue to the correct pillar — this appears in multiple exam questions.</p></div></div>
+        <div class="tip-card"><div class="tip-num">04</div><div class="tip-content"><h4>Master Every Role-player's Responsibilities</h4><p>FSCA licenses. FSP holds licence. KI manages. Representative advises clients. CO monitors compliance. FAIS Ombud resolves disputes. For 'who is responsible?' questions — map to the right role.</p></div></div>
+        <div class="tip-card"><div class="tip-num">05</div><div class="tip-content"><h4>Do Mock Exams Under Real Conditions</h4><p>Close your notes. Set a timer. Aim for 80%+ in mocks before booking the real exam. Moonstone questions are fully randomised — no two papers are the same. Practice is the only preparation.</p></div></div>
+        <div class="tip-card"><div class="tip-num">06</div><div class="tip-content"><h4>FICA Details Are Non-Negotiable</h4><p>CTR = R49 999 threshold / filed within 3 days. STR = suspicion triggers it / no minimum amount / as soon as reasonably possible. Tipping off = criminal offence. PEPs = Enhanced Due Diligence.</p></div></div>
+        <div class="tip-card"><div class="tip-num">07</div><div class="tip-content"><h4>Learn the Board Notice Numbers</h4><p>BN 80/2003 = GCOC. BN 194/2017 = Fit &amp; Proper. BN 127/2010 = Compliance Officers. BN 81/2003 = Ombud Rules. These numbers appear directly in exam questions — you must match them correctly.</p></div></div>
+        <div class="tip-card"><div class="tip-num">08</div><div class="tip-content"><h4>Learn the Debarment Process Step-by-Step</h4><p>Written notice → opportunity to respond → decision → FSP notifies FSCA within 15 days → appeal to the Financial Services Tribunal (FST). Know each step. The appeal body is the FST — NOT the FAIS Ombud.</p></div></div>
+        <div class="tip-card"><div class="tip-num">09</div><div class="tip-content"><h4>Watch for 'EXCEPT' and 'NOT' in Questions</h4><p>Many questions ask what is NOT required or which answer is INCORRECT. Rushing causes unnecessary errors on these. Read every word carefully. Underline key words. Eliminate obviously wrong answers first.</p></div></div>
+        <div class="tip-card"><div class="tip-num">10</div><div class="tip-content"><h4>Study Daily — Never Cram</h4><p>The RE exams test understanding, not rote memory. Study 1–2 hours daily over 3–4 weeks. Do practice questions after every topic before moving on. Enroll with ConnieM for a structured, guided approach.</p></div></div>
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <p style="color:rgba(255,255,255,.5);margin-bottom:1.2rem;font-size:15px;">Ready to access full study guides and mock exams?</p>
+        <button class="btn btn-gold btn-lg" onclick="showPage('enroll')">Enroll Now — Free Access on Approval</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: ENROLL
+═══════════════════════════════════════════════ -->
+<div class="page" id="page-enroll">
+  <section style="background:var(--navy-900);padding:70px 0 50px;">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(196,148,50,.15);border-color:rgba(196,148,50,.25);color:var(--gold-200);">Sayung Study Series</div>
+      <h1 class="section-title section-title-light">Enroll with <em>ConnieM Private Tutor</em></h1>
+      <p class="section-sub section-sub-light">Submit your enrollment. ConnieM personally reviews and approves every application — ensuring every student receives the attention and quality they deserve.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--ivory-100);">
+    <div class="container">
+      <div class="enroll-grid" style="display:grid;grid-template-columns:1fr 500px;gap:4rem;align-items:start;">
+
+        <!-- Left: Features -->
+        <div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--navy-900);margin-bottom:.5rem;">What You Get</h2>
+          <p style="color:var(--text-muted);margin-bottom:2rem;line-height:1.7;">After ConnieM approves your enrollment, you gain immediate access to all study materials and mock examinations.</p>
+          <div class="feature-list" style="background:none;">
+            <div class="feature-item" style="background:none;">
+              <div style="width:44px;height:44px;border-radius:10px;background:var(--gold-100);border:1px solid var(--gold-200);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">📚</div>
+              <div><h4 style="font-size:15px;font-weight:600;color:var(--navy-900);margin-bottom:3px;">Full Study Guide Access</h4><p style="font-size:13.5px;color:var(--text-muted);line-height:1.6;">Comprehensive RE1 and RE5 study guides covering every exam topic in depth with legislation tables, practice questions and exam tips.</p></div>
+            </div>
+            <div class="feature-item" style="background:none;">
+              <div style="width:44px;height:44px;border-radius:10px;background:var(--gold-100);border:1px solid var(--gold-200);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">📝</div>
+              <div><h4 style="font-size:15px;font-weight:600;color:var(--navy-900);margin-bottom:3px;">Timed Mock Examinations</h4><p style="font-size:13.5px;color:var(--text-muted);line-height:1.6;">Full-length mock exams with countdown timers, instant scoring, answer review and detailed explanations for both RE1 and RE5.</p></div>
+            </div>
+            <div class="feature-item" style="background:none;">
+              <div style="width:44px;height:44px;border-radius:10px;background:var(--gold-100);border:1px solid var(--gold-200);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">💬</div>
+              <div><h4 style="font-size:15px;font-weight:600;color:var(--navy-900);margin-bottom:3px;">Personal Tutor Support</h4><p style="font-size:13.5px;color:var(--text-muted);line-height:1.6;">Direct access to ConnieM Private Tutor for personalised guidance and study planning via WhatsApp or email.</p></div>
+            </div>
+            <div class="feature-item" style="background:none;">
+              <div style="width:44px;height:44px;border-radius:10px;background:var(--gold-100);border:1px solid var(--gold-200);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🛡️</div>
+              <div><h4 style="font-size:15px;font-weight:600;color:var(--navy-900);margin-bottom:3px;">Approval-Gated Quality</h4><p style="font-size:13.5px;color:var(--text-muted);line-height:1.6;">Each enrollment is personally reviewed by ConnieM, ensuring a committed, quality learning community where every student gets real attention.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div>
+          <div class="card" style="box-shadow:var(--shadow-lg);" id="enrollFormCard">
+            <div style="margin-bottom:1.8rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border-light);">
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--navy-900);margin-bottom:.3rem;">Enrollment Form</h3>
+              <p style="font-size:13px;color:var(--text-muted);">All fields marked * are required. Reviewed personally by ConnieM within 24–48 hours.</p>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Full Names *</label>
+                <input type="text" class="form-input" id="eFirstName" placeholder="e.g. Thandi"/>
+                <div class="form-error" id="err-eFirstName"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Surname *</label>
+                <input type="text" class="form-input" id="eLastName" placeholder="e.g. Dlamini"/>
+                <div class="form-error" id="err-eLastName"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cellphone Number *</label>
+              <input type="tel" class="form-input" id="ePhone" placeholder="e.g. 082 555 0000"/>
+              <div class="form-error" id="err-ePhone"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" id="eEmail" placeholder="e.g. thandi@email.com"/>
+              <div class="form-error" id="err-eEmail"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Exam I Am Preparing For *</label>
+              <select class="form-input" id="eExam">
+                <option value="">Please select...</option>
+                <option>RE1 — Key Individuals</option>
+                <option>RE5 — Representatives</option>
+                <option>Both RE1 and RE5</option>
+              </select>
+              <div class="form-error" id="err-eExam"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">My Current Role *</label>
+              <select class="form-input" id="eRole">
+                <option value="">Please select...</option>
+                <option>Financial Advisor / Broker</option>
+                <option>Insurance Representative</option>
+                <option>Key Individual / Manager</option>
+                <option>Investment Consultant</option>
+                <option>Short-term Insurance Broker</option>
+                <option>Long-term Insurance Broker</option>
+                <option>New to Financial Services</option>
+                <option>Other</option>
+              </select>
+              <div class="form-error" id="err-eRole"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Contact Method</label>
+              <div style="display:flex;gap:8px;">
+                <button class="btn btn-ghost btn-sm" id="contactWA" style="flex:1;font-size:12px;" onclick="setContact('WhatsApp')">WhatsApp</button>
+                <button class="btn btn-ghost btn-sm" id="contactEM" style="flex:1;font-size:12px;" onclick="setContact('Email')">Email</button>
+                <button class="btn btn-ghost btn-sm" id="contactPH" style="flex:1;font-size:12px;" onclick="setContact('Phone')">Phone</button>
+              </div>
+            </div>
+            <button class="btn btn-gold btn-full btn-lg" onclick="submitEnrollForm()" style="margin-top:.5rem;">Submit Enrollment →</button>
+            <p class="form-note">Your information is kept strictly confidential. ★ Enrollment is subject to approval by <strong>ConnieM Private Tutor</strong>.</p>
+          </div>
+
+          <div class="card" id="enrollSuccessCard" style="display:none;box-shadow:var(--shadow-lg);">
+            <div class="success-state">
+              <div class="success-icon">🎓</div>
+              <div class="success-title">Enrollment Submitted!</div>
+              <p class="success-desc">Thank you! Your application is now under review by <strong>ConnieM Private Tutor</strong>. You will be contacted within <strong>24–48 hours</strong> upon approval.</p>
+              <div style="background:var(--gold-50);border:1px solid var(--gold-200);border-radius:10px;padding:1rem;margin-bottom:1.5rem;text-align:left;">
+                <p style="font-size:13px;color:var(--gold-700);line-height:1.6;"><strong>Next step:</strong> Once ConnieM approves your enrollment, you will receive immediate access to the full RE1 and RE5 study guides and mock examinations on this platform.</p>
+              </div>
+              <button class="btn btn-gold btn-sm" onclick="simulateApproval()">🔓 Demo: Preview Approved Access</button>
+              <p style="font-size:11px;color:var(--text-light);margin-top:.5rem;">(This button simulates ConnieM's approval — for demo purposes only)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: STUDY GUIDE
+═══════════════════════════════════════════════ -->
+<div class="page" id="page-study">
+  <section style="background:var(--navy-900);padding:60px 0 40px;">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(196,148,50,.15);border-color:rgba(196,148,50,.25);color:var(--gold-200);">Study Materials</div>
+      <h1 class="section-title section-title-light">Study Guides — <em>Sayung Series</em></h1>
+      <p class="section-sub section-sub-light">Curated by ConnieM Private Tutor. Study each topic thoroughly, then test yourself with the practice questions at the end of each section.</p>
+    </div>
+  </section>
+  <section class="section" style="background:var(--ivory-100);">
+    <div class="container" id="studyContainer">
+      <!-- Locked or Unlocked content rendered by JS -->
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: MOCK EXAM
+═══════════════════════════════════════════════ -->
+<div class="page" id="page-mock">
+  <section style="background:var(--navy-900);padding:60px 0 40px;">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(196,148,50,.15);border-color:rgba(196,148,50,.25);color:var(--gold-200);">Mock Examinations</div>
+      <h1 class="section-title section-title-light">Test Your <em>Knowledge</em></h1>
+      <p class="section-sub section-sub-light">Simulate real Moonstone exam conditions. Timed, closed-book, instant scoring with full answer review. Aim for 80%+ before booking the real exam.</p>
+    </div>
+  </section>
+  <section class="section" style="background:var(--ivory-100);">
+    <div class="container" id="mockContainer">
+      <!-- Rendered by JS -->
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: ADMIN
+═══════════════════════════════════════════════ -->
+<div class="page" id="page-admin">
+  <section style="background:var(--navy-900);padding:60px 0 40px;">
+    <div class="container">
+      <div class="section-tag" style="background:rgba(196,148,50,.15);border-color:rgba(196,148,50,.25);color:var(--gold-200);">Admin Dashboard</div>
+      <h1 class="section-title section-title-light">Enrollment <em>Management</em></h1>
+      <p class="section-sub section-sub-light">Review, approve or decline student enrollment applications. Approved students gain immediate access to study materials and mock examinations.</p>
+    </div>
+  </section>
+  <section class="section" style="background:var(--ivory-100);">
+    <div class="container" id="adminContainer">
+      <!-- Rendered by JS -->
+    </div>
+  </section>
+</div>
+
+<!-- ADMIN LOGIN MODAL -->
+<div class="modal-bg" id="adminModal" style="display:none;" onclick="closeAdminModal()">
+  <div class="modal-card" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <span class="modal-header-title">🔐 Admin Access</span>
+      <button class="modal-close" onclick="closeAdminModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="color:var(--text-muted);font-size:14px;margin-bottom:1.5rem;line-height:1.6;">Enter your PIN to access the ConnieM admin dashboard and manage student enrollments.</p>
+      <div class="form-group">
+        <label class="form-label">Admin PIN</label>
+        <input type="password" class="form-input" id="adminPinInput" placeholder="Enter PIN" onkeydown="if(event.key==='Enter')verifyAdmin()"/>
+      </div>
+      <p style="font-size:12px;color:var(--text-light);margin-bottom:1rem;">Demo PIN: <strong style="color:var(--gold-600);">connie2025</strong></p>
+      <button class="btn btn-gold btn-full" onclick="verifyAdmin()">Login to Dashboard →</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toastEl" style="display:none;"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">ConnieM Private Tutor</div>
+      <div class="footer-copy" style="margin-top:4px;">© 2025 Sayung Study Series. All rights reserved.</div>
+    </div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('about')">RE Exams</a>
+      <a onclick="showPage('tips')">Exam Tips</a>
+      <a onclick="showPage('enroll')">Enroll</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════ -->
+<script>
+/* ── STATE ──────────────────────────────────────── */
+let isApproved = false;
+let isAdmin = false;
+let selectedContact = 'WhatsApp';
+let currentUser = null;
+let nextId = 4;
+
+let enrollments = [
+  { id:1, name:'Thandi', surname:'Dlamini', phone:'082 555 0001', email:'thandi@demo.co.za', exam:'RE5', role:'Insurance Representative', contact:'WhatsApp', status:'pending', date:'2025-06-01' },
+  { id:2, name:'Sipho', surname:'Nkosi', phone:'073 555 0002', email:'sipho@demo.co.za', exam:'RE1', role:'Key Individual / Manager', contact:'Email', status:'pending', date:'2025-06-02' },
+  { id:3, name:'Lerato', surname:'Mokoena', phone:'061 555 0003', email:'lerato@demo.co.za', exam:'Both RE1 and RE5', role:'Financial Advisor', contact:'Phone', status:'approved', date:'2025-05-28' },
+];
+
+/* ── STUDY DATA ─────────────────────────────────── */
+const RE1_TOPICS = [
+  { id:1, icon:'⚖️', title:'The FAIS Act as a Regulatory Framework',
+    summary:'History, purpose, FSR Act, twin peaks, FSCA, role-players, subordinate legislation',
+    sections:[
+      { h:'1.1 History & Purpose', b:'The FAIS Act 37 of 2002 was enacted because South Africa\'s financial advisory sector was entirely unregulated before 2002. Anyone could give financial advice without qualifications, leading to widespread mis-selling, fraud and consumer harm.\n\nTWO CORE PURPOSES:\n1. Professionalise the financial services sector\n2. Protect consumers of financial products and services' },
+      { h:'1.2 Key Commencement Dates', b:'• 2002: FAIS Act 37 of 2002 enacted by Parliament\n• 15 November 2002: Act came into force (most sections)\n• 8 March 2003: Sections 20–31 operational (Ombud provisions)\n• 30 September 2004: Sections 7 and 13(1) effective — licensing required\n• 1 April 2018: FSB replaced by FSCA under the FSR Act 9 of 2017\n• 2023: Crypto assets declared financial products (FSCA FAIS Notice 40/2022)' },
+      { h:'1.3 The FSR Act & Twin Peaks Model', b:'The Financial Sector Regulation Act 9 of 2017 created the twin peaks model:\n\nPEAK 1 — FSCA: Financial Sector Conduct Authority — market conduct; administers FAIS Act; licenses FSPs; approves KIs and COs\n\nPEAK 2 — Prudential Authority (PA): Within the SARB — regulates financial soundness (capital, solvency, liquidity)\n\nFINANCIAL SERVICES TRIBUNAL (FST): Independent body established by FSR Act to hear appeals against regulatory decisions including debarment\n\nNOTE: Section 1A of FAIS Act — "Registrar" now means FSCA Commissioner; "the Board" now means FSCA' },
+      { h:'1.4 Role-players', b:'• FSCA: Licenses FSPs, approves KIs/COs, enforces FAIS, maintains public registers, imposes penalties\n• FSP (Financial Services Provider): Holds the FAIS licence; appoints KIs and representatives\n• Key Individual (KI): Natural person managing/overseeing FSP\'s financial services activities — approved by FSCA\n• Representative: Renders financial services to clients on behalf of the FSP\n• Compliance Officer (CO): Monitors FSP compliance — must be FSCA-approved (BN 127/2010)\n• FAIS Ombud: Resolves client vs FSP disputes — free; max R3.5M compensation award\n• Product Supplier: Manufactures/issues financial products (insurer, fund manager, bank)' },
+      { h:'1.5 Subordinate Legislation', b:'BN 80/2003 — General Code of Conduct (GCOC): YOUR conduct standard\nBN 194/2017 — Fit & Proper Requirements: qualifications, RE exams, CPD\nBN 127/2010 — Compliance Officers: approval and duties\nBN 81/2003 — FAIS Ombud Rules: prescription period, powers, compensation\nBN 82/2003 — Reappointment of debarred representatives\nFSCA FAIS Notice 40/2022 — Crypto assets are financial products\n\nAll subordinate legislation has the SAME FORCE OF LAW as the FAIS Act itself.' },
+    ],
+    tip:'BN 80/2003 = GCOC | BN 194/2017 = Fit & Proper | BN 127/2010 = Compliance Officers | BN 81/2003 = Ombud Rules',
+    questions:[
+      { q:'Section 7 of the FAIS Act (licensing requirement) became effective on:', opts:['15 November 2002','8 March 2003','30 September 2004','1 April 2018'], a:2, exp:'Sections 7 and 13(1) became operational on 30 September 2004 — the real licensing "switch-on" date.' },
+      { q:'The "twin peaks" regulatory model was introduced by:', opts:['The FAIS Act 37 of 2002','The Insurance Act 18 of 2017','The Financial Sector Regulation Act 9 of 2017','The National Credit Act'], a:2, exp:'The FSR Act 9 of 2017 created the twin peaks model — FSCA (conduct) + Prudential Authority (soundness).' },
+      { q:'In the FAIS Act, all references to "the Registrar" now refer to:', opts:['The FSB Chairperson','The SARB Governor','The FSCA Commissioner','The National Treasury DG'], a:2, exp:'Section 1A of the FAIS Act — "Registrar" now means the FSCA Commissioner since 1 April 2018.' },
+      { q:'Board Notice 80 of 2003 is:', opts:['Fit and proper requirements','The General Code of Conduct','Compliance officer approval requirements','Debarment guidance notes'], a:1, exp:'BN 80/2003 = the General Code of Conduct — primary conduct standard for all FSPs and representatives.' },
+      { q:'The FAIS Ombud may award compensation of up to:', opts:['R500 000','R1 million','R3.5 million','Unlimited'], a:2, exp:'The current FAIS Ombud compensation limit is R3.5 million per complaint. Free to complainants.' },
+    ]
+  },
+  { id:2, icon:'💰', title:'Financial Products & Financial Services',
+    summary:'What is a financial product, advice vs intermediary service, product categories I–IV',
+    sections:[
+      { h:'2.1 Financial Products', b:'LISTED FINANCIAL PRODUCTS under the FAIS Act:\n• Long-term and short-term insurance contracts\n• Participatory interests in collective investment schemes (unit trusts, ETFs)\n• Securities and instruments (shares, bonds, debentures, money market instruments)\n• Retirement annuities and pension fund benefits\n• Health service benefits (medical aid membership)\n• Bank deposits and savings products\n• Friendly society benefits\n• Crypto assets (from 2023 — FSCA FAIS Notice 40/2022)\n\nNOT financial products: residential property, motor vehicles, personal loans (not qualifying as deposits), employment contracts' },
+      { h:'2.2 Advice — Definition', b:'ADVICE = any recommendation, guidance or proposal of a financial nature furnished to a SPECIFIC CLIENT in respect of a financial product — where it could reasonably lead to a transaction or decision about a financial product.\n\nIS advice: Recommending a specific product based on the client\'s needs\nIS advice: Advising a client to switch, cancel or retain a product\nIS advice: Automated / robo-advice (tech-neutral approach)\n\nNOT advice: General financial education\nNOT advice: Factual product information without a specific recommendation\nNOT advice: Explaining product features without suggesting a purchase\nNOT advice: Informing a client of their policy value' },
+      { h:'2.3 Intermediary Service', b:'INTERMEDIARY SERVICE = any act performed on behalf of a client OR product supplier to bring about, maintain, increase, vary or cancel a financial product.\n\nExamples:\n• Submitting an application on behalf of a client\n• Collecting premiums or investment contributions\n• Processing a claim on behalf of a client or insurer\n• Providing a quotation (step toward a product)\n• Any administrative act relating to a financial product' },
+      { h:'2.4 FSP Licence Categories', b:'CATEGORY I: General FSP — advice and intermediary services (most common)\n  Sub-cat A: Long-term insurance (personal lines)\n  Sub-cat B: Short-term insurance (personal lines)\n  Sub-cat C: Securities and instruments\n  Sub-cat D: Collective investment schemes\nCATEGORY II: Discretionary investment management\nCATEGORY IIA: Hedge fund FSPs\nCATEGORY III: Administrative (HOAT) FSPs — multi-managers\nCATEGORY IV: Assistance business (funeral policies)\n\nFSPs may only operate in the categories specified in their FSCA licence.' },
+    ],
+    tip:'Crypto assets = financial products from 2023. A home loan (mortgage bond) = NOT a financial product. Advice = specific recommendation to a specific client.',
+    questions:[
+      { q:'Which of the following is a financial product under the FAIS Act?', opts:['A motor vehicle','A home loan (mortgage bond)','A retirement annuity','Residential property'], a:2, exp:'A retirement annuity is a listed financial product. Motor vehicles, home loans and property are not.' },
+      { q:'A representative explains how unit trusts work in general without recommending one. This is:', opts:['Advice under FAIS','An intermediary service','General information — not advice','A breach of the GCOC'], a:2, exp:'Generic product information without a specific recommendation to a specific client is NOT advice.' },
+      { q:'Crypto assets became financial products under the FAIS Act from:', opts:['2002','2017','2020','2023'], a:3, exp:'FSCA FAIS Notice 40 of 2022 declared crypto assets as financial products, effective from 2023.' },
+      { q:'Category II FSP licence covers:', opts:['General advice (life, short-term, CIS)','Discretionary investment management','Assistance business (funeral policies)','Administrative FSPs (HOATs)'], a:1, exp:'Category II = discretionary investment management FSPs who exercise discretion over client portfolios.' },
+      { q:'Collecting premiums from a client on behalf of an insurer is:', opts:['Advice','Not regulated by FAIS','An intermediary service','A prohibited activity without an additional licence'], a:2, exp:'Collecting premiums = acting on behalf of a product supplier to maintain a financial product = intermediary service.' },
+    ]
+  },
+  { id:3, icon:'🪪', title:'FSP Licensing — Sections 7, 8, 13 & Maintaining the Licence',
+    summary:'Section 7 criminal prohibition, Section 8 application, material changes, 15-day rule, suspension/withdrawal',
+    sections:[
+      { h:'3.1 Section 7 — The Criminal Prohibition', b:'SECTION 7(1)(a): No person may act as an FSP without a valid licence — CRIMINAL OFFENCE\nSECTION 7(1)(b): No person may act as a representative without appointment under Section 13 — CRIMINAL OFFENCE\nSECTION 7(2): Unlicensed conduct does NOT automatically void the transaction — but criminal and regulatory consequences follow.\n\nActing beyond the licence conditions is also illegal.' },
+      { h:'3.2 Applying for a Licence (Section 8)', b:'Application to FSCA using FSP Form 1 (FSCA FAIS Notice 1 of 2018)\nThe FSCA considers: fit and proper status; adequate resources; ability to comply with FAIS; at least ONE approved KI\n\nAfter approval: licence must be displayed at principal office and on website; licence number on all communications' },
+      { h:'3.3 Maintaining the Licence — Ongoing Obligations', b:'• Continuously meet ALL fit and proper requirements\n• Maintain at least ONE approved KI at all times\n• Report ALL material changes to FSCA within 15 DAYS (FSP Form 1)\n• Pay annual FSCA and FAIS Ombud levies\n• Display licence (principal office + website + all communications)\n• Maintain the Register of Representatives\n• Appoint and maintain an approved CO (where required)' },
+      { h:'3.4 Material Changes — Must Report Within 15 Days', b:'• New or departing Key Individual\n• New or departing Compliance Officer\n• Change of business name, trading name or address\n• Change of legal status (CC to Pty Ltd, etc.)\n• Ownership/shareholding changes\n• Criminal convictions of the FSP entity or any KI\n• Any material change in financial position\n• Commencement of liquidation, sequestration or business rescue\n\nMETHOD: FSP Form 1 submitted to the FSCA' },
+      { h:'3.5 Suspension & Withdrawal', b:'The FSCA may SUSPEND or WITHDRAW a licence for:\n• Failing to meet fit and proper requirements\n• Engaging in undesirable business practices (Section 14A)\n• Providing false information to the FSCA\n• Failing to pay levies\n• Having no approved Key Individual remaining\n• Criminal convictions\n• Failing to comply with licence conditions\n\nMAXIMUM ADMINISTRATIVE PENALTY: R50 million or 10% of annual turnover (FSR Act Section 167)' },
+    ],
+    tip:'Section 7 = CRIMINAL OFFENCE. Material changes = 15 DAYS. Max penalty = R50 million or 10% of turnover. FSCA decisions must be in WRITING — verbal instructions are not binding.',
+    questions:[
+      { q:'Acting as an FSP without a valid FAIS licence is:', opts:['A civil matter only','A breach of the GCOC only','A criminal offence under Section 7','Not an offence if done in good faith'], a:2, exp:'Section 7(1)(a) makes unlicensed operation a criminal offence.' },
+      { q:'Material changes to the FSP\'s profile must be reported to the FSCA within:', opts:['5 working days','30 calendar days','15 days','60 days'], a:2, exp:'Section 8(4) requires notification of all material changes within 15 days using FSP Form 1.' },
+      { q:'The maximum administrative penalty the FSCA may impose is:', opts:['R5 million','R10 million','R50 million or 10% of annual turnover','R100 000'], a:2, exp:'FSR Act Section 167 — max penalty: R50 million OR 10% of annual turnover, whichever is greater.' },
+      { q:'An FSP licence is transferable:', opts:['Yes, with FSCA approval','Yes, within the same group of companies','No — licences are personal to the holder and not transferable','Yes, if the KI remains the same'], a:2, exp:'FSP licences are personal to the holder and cannot be transferred to any other entity.' },
+      { q:'An FSP\'s only KI resigns. The FSP must:', opts:['Continue operating for up to 12 months','Immediately close permanently','Promptly appoint and have approved a new KI — cannot operate long-term without one','Allow a representative to temporarily act as KI'], a:2, exp:'An FSP must always have at least ONE approved KI. If the KI leaves, a replacement must be found promptly.' },
+    ]
+  },
+  { id:4, icon:'📋', title:'Fit and Proper Requirements — BN 194 of 2017',
+    summary:'Four pillars, RE exams, DOFA, supervision, CPD, COB, PST — all ongoing and continuous',
+    sections:[
+      { h:'4.1 Overview — BN 194 of 2017', b:'Board Notice 194 of 2017 (replacing BN 106/2008) prescribes ONGOING fit and proper requirements for FSPs, KIs and representatives.\n\nRequirements apply CONTINUOUSLY — not once-off at the time of appointment.' },
+      { h:'4.2 Four Pillars', b:'PILLAR 1 — HONESTY, INTEGRITY & GOOD STANDING:\nDisqualifying factors: dishonesty convictions; debarment; prohibition orders; false statements to regulators; market abuse findings; gross negligence in financial services\n\nPILLAR 2 — COMPETENCE:\nRequired qualifications (mapped to product categories) + Regulatory Examinations (RE1/RE5) + Experience + CPD (min 6 hrs/year) + Class of Business Training (COB) + Product Specific Training (PST)\n\nPILLAR 3 — OPERATIONAL ABILITY:\nAdequate human, financial and technical resources\n\nPILLAR 4 — FINANCIAL SOUNDNESS:\nNot sequestrated; not under debt review; not liquidated; no dishonesty civil judgments' },
+      { h:'4.3 Regulatory Examinations', b:'RE1: For FSPs and Key Individuals — 80 questions — pass mark 65% (minimum 52/80)\nRE5: For Representatives — 50 questions — pass mark 65% (minimum 33/50)\nRE3: For Category II and IIA KIs — additional to RE1\nRE4: For Category III KIs — additional to RE1\n\nAll administered by Moonstone Business School\nQuestions are randomised — no two papers are the same\nLevels: L1 30% recall | L2 40% comprehension | L3 20% application | L4 10% analysis' },
+      { h:'4.4 DOFA, CPD, COB & PST', b:'DOFA (Date of First Appointment): Starts the clock on qualification requirements. Representative may work under supervision while completing requirements.\n\nCPD: Minimum 6 CPD hours per calendar year — relevant to approved product categories\n\nCOB (Class of Business Training): Required before dealing in a NEW CLASS of products\n\nPST (Product Specific Training): Required before advising on any specific NEW PRODUCT added to the FSP\'s offering\n\nNon-completion of any of the above = failure to meet competence = fit and proper failure' },
+    ],
+    tip:'BN 194/2017 replaced BN 106/2008. DEBT REVIEW = financial soundness failure. DOFA starts the clock. CPD = 6 hours minimum per year.',
+    questions:[
+      { q:'Which Board Notice currently governs fit and proper requirements?', opts:['BN 106 of 2008','BN 80 of 2003','BN 194 of 2017','BN 127 of 2010'], a:2, exp:'BN 194 of 2017 replaced BN 106/2008 and is the current governing document for fit and proper requirements.' },
+      { q:'A representative is placed under debt review. This affects which pillar?', opts:['Honesty and integrity','Competence','Operational ability','Financial soundness'], a:3, exp:'Debt review affects the financial soundness pillar — one of the four ongoing fit and proper requirements.' },
+      { q:'RE1 consists of how many questions with what pass mark?', opts:['50 questions; 65% (33)','100 questions; 70% (70)','80 questions; 65% (52)','60 questions; 60% (36)'], a:2, exp:'RE1 = 80 questions; pass mark = 65% = minimum 52 correct answers. Administered by Moonstone.' },
+      { q:'Minimum CPD hours per calendar year:', opts:['3 hours','6 hours','10 hours','20 hours'], a:1, exp:'BN 194/2017 requires a minimum of 6 CPD hours per calendar year — relevant to approved product categories.' },
+      { q:'Fit and proper requirements are:', opts:['Once-off at the time of licensing','Only required for Key Individuals','Ongoing — must be maintained continuously throughout your career','Only assessed during FSCA annual inspections'], a:2, exp:'Fit and proper requirements are ONGOING — not a once-off check. They must be met at all times.' },
+    ]
+  },
+  { id:5, icon:'📋', title:'General Code of Conduct — BN 80 of 2003',
+    summary:'Overriding standard, FNA, mandatory disclosures, advice records, COI management, custody, advertising',
+    sections:[
+      { h:'5.1 Overriding Standard (Section 2)', b:'An FSP must at all times render financial services:\nHONESTLY — no deception, no misrepresentation\nFAIRLY — equal treatment, no exploitation of vulnerability\nWITH DUE SKILL, CARE AND DILIGENCE — apply proper knowledge and effort\nIN THE INTERESTS OF CLIENTS — client needs drive recommendations, not commission\nWITH REGARD TO INTEGRITY OF THE FINANCIAL SERVICES INDUSTRY' },
+      { h:'5.2 Financial Needs Analysis (FNA) — Mandatory', b:'Must be conducted BEFORE giving ANY advice — ALL clients, ALL products (including direct marketers since 2020).\n\nFNA must cover: financial goals; current financial situation; existing products; risk appetite; investment horizon; tax situation; knowledge and experience; affordability\n\nIf client refuses to provide information: warn them of the risks; you may decline to give advice.' },
+      { h:'5.3 Mandatory Product Disclosures', b:'When recommending a specific product, disclose:\n• Product name and product supplier details\n• Nature and material terms of the product\n• All risks associated with the product\n• All fees, charges and commissions (in rand amounts where possible)\n• Cooling-off rights (where applicable)\n• Material exclusions and limitations\n• Material tax implications\n• Past performance WITH disclaimer: "Past performance does not guarantee future results"\n\nNOTE: Performance graphs are NOT mandatory — only required when the client specifically requests them.' },
+      { h:'5.4 Advice Record', b:'After giving advice, provide client with a written advice record containing:\n• Client\'s financial needs and objectives (from FNA)\n• Financial products considered by the FSP\n• Basis for the recommendation made\n• Risks, limitations and costs disclosed\n\nVerbal advice must be confirmed in writing within a reasonable period.\nRetained by FSP for 5 YEARS.' },
+      { h:'5.5 Conflict of Interest (COI)', b:'Written COI Management Policy — must be disclosed to clients and publicly available\nActivelyidentify, avoid and manage all conflicts of interest\nWhere COI cannot be avoided — fully disclose to the client before proceeding\nNo undisclosed product supplier benefits\nAll representatives must be trained on the COI policy\n\nCommission-driven recommendations (recommending because it pays more commission rather than because it\'s suitable) = CONFLICT OF INTEREST' },
+      { h:'5.6 Client Funds & Custody', b:'Client funds must be held in a SEPARATE TRUST ACCOUNT — never mixed with FSP operating funds.\nFidelity cover required where applicable.\nDetailed records of all client funds held.\nClient funds must be invested/placed promptly as directed.' },
+    ],
+    tip:'FNA = mandatory before ANY advice. Performance graphs = NOT mandatory (only on request). COI Policy = must be disclosed to clients. Client funds = SEPARATE trust account.',
+    questions:[
+      { q:'The overriding standard of the GCOC requires an FSP to act:', opts:['Profitably and efficiently','Honestly, fairly, with due skill, care and diligence, in the interests of clients','In the interests of the product supplier first','As directed by the KI at all times'], a:1, exp:'GCOC Section 2 — the overriding standard: honest, fair, skilled, diligent, client-centred conduct.' },
+      { q:'A Financial Needs Analysis must be conducted:', opts:['Only for investments above R1 million','Before giving advice — for ALL clients, ALL products','Only for long-term insurance products','Only when the client specifically requests it'], a:1, exp:'The FNA is mandatory for ALL advice — regardless of product type, investment amount or client type.' },
+      { q:'Past performance graphs of a financial product must be provided:', opts:['For every recommended product','Only when the client specifically requests them','Always — for all products with a 5-year track record','Quarterly to all existing clients'], a:1, exp:'Performance graphs are NOT mandatory — only required when the client specifically asks for them.' },
+      { q:'Client funds held by an FSP must be:', opts:['Held in the FSP\'s general operating account','Held in the KI\'s personal account','Held in a separate trust account — never mixed with FSP funds','Deposited with the FSCA for safekeeping'], a:2, exp:'Client funds must always be held in a separate trust account — commingling with FSP funds is strictly prohibited.' },
+      { q:'The Conflict of Interest Management Policy must be:', opts:['Kept confidential — for internal use only','Disclosed to clients and publicly available','Submitted to FSCA for annual approval','Reviewed only every 5 years'], a:1, exp:'The COI Management Policy must be disclosed to clients and be publicly available — mandatory under the GCOC.' },
+    ]
+  },
+  { id:6, icon:'🔍', title:'FICA, AML, Record Keeping & the FAIS Ombud',
+    summary:'FICA CDD, CTR (R49 999/3 days), STR, PEPs, tipping off, money laundering stages, 5-year retention',
+    sections:[
+      { h:'6.1 FICA Overview', b:'FICA 38 of 2001 (as amended by FIC Amendment Act 1/2017) requires FSPs (as ACCOUNTABLE INSTITUTIONS) to:\n• Verify client identities (CDD/KYC) before business commences\n• Monitor transactions for suspicious activity\n• Report suspicious/cash threshold transactions to the Financial Intelligence Centre (FIC)\n• Keep CDD and transaction records for 5 YEARS' },
+      { h:'6.2 Customer Due Diligence (CDD)', b:'INDIVIDUALS: Valid SA ID (green barcoded or smart ID card) OR valid passport + proof of residential address (not older than 3 months — utility bill, bank statement)\n\nCOMPANIES: Certificate of Incorporation (CoR 14.3), MOI, directors list, BENEFICIAL OWNER information\nTRUSTS: Trust deed, letters of authority, trustees list, beneficial interest holders\n\nBENEFICIAL OWNER = natural person who ultimately owns or controls MORE THAN 25% of the entity\n\nPEPs (Politically Exposed Persons): Require Enhanced Due Diligence — senior management approval; source of funds; enhanced ongoing monitoring. Applies to DOMESTIC and FOREIGN PEPs and their close family/associates.' },
+      { h:'6.3 CTR & STR Reporting', b:'CASH THRESHOLD REPORT (CTR):\n• Cash transactions EXCEEDING R49 999\n• File within 3 DAYS via FIC GoAML system\n• Applies to single AND aggregated related transactions\n• Objective report — no suspicion required; applies regardless of apparent legitimacy\n\nSUSPICIOUS TRANSACTION REPORT (STR):\n• REASONABLE SUSPICION of money laundering or terrorist financing\n• File AS SOON AS REASONABLY POSSIBLE\n• NO minimum amount — suspicion is the trigger\n• TIPPING OFF the suspect = CRIMINAL OFFENCE\n• FSP protected from civil liability for good-faith STRs' },
+      { h:'6.4 Money Laundering — Three Stages', b:'STAGE 1 — PLACEMENT: Criminal proceeds introduced into the financial system (e.g. cash deposits, premium payments)\n\nSTAGE 2 — LAYERING: Disguising the origin through complex transactions (wire transfers, converting to crypto, buying assets)\n\nSTAGE 3 — INTEGRATION: Laundered funds re-enter the economy appearing legitimate (real estate, businesses, luxury goods)\n\nTERRORIST FINANCING differs from money laundering: may use LEGITIMATELY obtained funds for illegal purposes. Both must be reported via STR.' },
+      { h:'6.5 Record Keeping', b:'Advice records (FNA + advice given): 5 years from advice date or product maturity/termination\nFICA CDD records: 5 years after end of business relationship\nFICA transaction records: 5 years from transaction date\nCompliance reports: 5 years (signed by KI)\nRep register: continuously updated; 5 years after departure\nCPD/training records: 5 years\n\nFORMAT: Electronic or written — easily accessible; readily reducible to print; secure against unauthorised access' },
+      { h:'6.6 The FAIS Ombud', b:'WITHIN jurisdiction: complaints about advice and intermediary services; alleged GCOC contraventions; non-disclosure; unsuitable advice\nOUTSIDE jurisdiction: product performance; criminal matters; matters before court; time-barred complaints\n\nPOWERS: Summon persons; require documents; conduct hearings; award compensation; issue directions\nMAXIMUM COMPENSATION: R3.5 MILLION per complaint\nCOST: FREE to complainants\nPRESCRIPTION: 3 YEARS from complainant\'s awareness of the issue' },
+    ],
+    tip:'CTR = R49 999 threshold / 3 days. STR = suspicion / no minimum / as soon as possible. Tipping off = criminal offence. Money laundering = Placement → Layering → Integration.',
+    questions:[
+      { q:'A CTR must be filed for cash transactions exceeding:', opts:['R10 000','R25 000','R49 999','R100 000'], a:2, exp:'CTRs required for cash transactions exceeding R49 999 — regardless of apparent legitimacy.' },
+      { q:'A CTR must be submitted to the FIC within:', opts:['Same day','3 days','15 days','30 days'], a:1, exp:'CTRs must be filed with the FIC within 3 days of the cash transaction — via GoAML system.' },
+      { q:'Telling a client that a Suspicious Transaction Report was filed about them is:', opts:['Required by FICA','Good client relationship management','Tipping off — a criminal offence','Allowed if the client asks directly'], a:2, exp:'Tipping off is explicitly criminalised under FICA — informing a suspect of an STR is a criminal offence.' },
+      { q:'The three stages of money laundering in the correct order are:', opts:['Layering, Placement, Integration','Placement, Integration, Layering','Placement, Layering, Integration','Integration, Placement, Layering'], a:2, exp:'Money laundering: Stage 1 Placement → Stage 2 Layering → Stage 3 Integration.' },
+      { q:'Debarment must be reported to the FSCA within:', opts:['5 days','15 days','30 days','60 days'], a:1, exp:'The FSP must notify the FSCA of any debarment within 15 days — FSCA updates the public register.' },
+    ]
+  }
+];
+
+const RE5_TOPICS = [
+  { id:1, icon:'📜', title:'The FAIS Act — Your Role as a Representative',
+    summary:'Your position in the regulatory ecosystem, role-players, how the KI and CO affect you',
+    sections:[
+      { h:'1.1 Your Position in the FAIS Ecosystem', b:'You = REPRESENTATIVE: You render financial services to clients on behalf of the FSP, under the FSP\'s licence.\n\nYour regulatory chain:\nFSCA licenses FSP → FSP appoints KI → KI manages you → CO monitors your compliance → FAIS Ombud handles client complaints about you\n\nYou are authorised by the FSP — NOT directly by the FSCA.' },
+      { h:'1.2 Key Facts You Must Know', b:'• Acting as a representative without FSP appointment = CRIMINAL OFFENCE (Section 7(1)(b))\n• Your authorisation ENDS IMMEDIATELY when you leave the FSP\n• You must carry proof of authorisation and produce it on request\n• You may only advise in the product categories you are specifically approved for\n• You must disclose to clients that you are under supervision (if applicable)\n• FSCA decisions are only valid in WRITING — verbal instructions are not binding\n• Ignorance of new legislation is NOT a valid defence — stay updated' },
+      { h:'1.3 The Compliance Officer and You', b:'The CO monitors YOUR compliance and reports to the KI:\n• BN 127/2010 governs CO approval and duties\n• CO must be FSCA-approved before performing compliance functions\n• CO must be independent from the FSP (no commercial conflicts of interest)\n• CO may be internal (FSP employee) or external (compliance practice)\n• CO prepares compliance reports — KI SIGNS THEM OFF (not the CO)\n• Sole proprietor FSP with NO representatives = NOT required to appoint a CO\n• If CO finds serious non-compliance the FSP refuses to address = CO must report to FSCA' },
+      { h:'1.4 Key Legislation', b:'• FAIS Act 37 of 2002 — effective 30 Sept 2004 for licensing\n• FSR Act 9 of 2017 — created twin peaks; FSCA replaced FSB on 1 April 2018\n• BN 80/2003 — General Code of Conduct (GCOC) — your conduct standard\n• BN 194/2017 — Fit and Proper Requirements — your competence obligations\n• BN 127/2010 — Compliance Officers — the CO who monitors you\n• FICA 38/2001 — your AML/CDD obligations' },
+    ],
+    tip:'You are authorised by the FSP. Your authorisation ends IMMEDIATELY on leaving the FSP. KI signs off compliance reports (not the CO). Sole proprietor without reps = no CO required.',
+    questions:[
+      { q:'As a representative, you are authorised to render financial services by:', opts:['The FSCA directly','The FAIS Ombud','The FSP','The product supplier'], a:2, exp:'Representatives are authorised by their FSP — not by the FSCA directly.' },
+      { q:'Who signs off compliance reports prepared by the Compliance Officer?', opts:['The Compliance Officer','The FSCA Commissioner','The Key Individual','The external auditor'], a:2, exp:'The KI signs off compliance reports — reflecting the KI\'s ultimate accountability for FSP compliance.' },
+      { q:'A sole proprietor with no representatives is required to appoint an FSCA-approved CO:', opts:['Always — all FSPs must have a CO','Only if they hold a Category II licence','Never — exempt from this requirement','Only after 2 years of operation'], a:2, exp:'A sole proprietor without representatives is NOT required to appoint a Compliance Officer.' },
+      { q:'Your authorisation from an FSP ends when you resign:', opts:['After 6 months','After FSCA updates the public register','Immediately','After 30 days'], a:2, exp:'Representative authorisation ends immediately when you leave the FSP — you cannot continue rendering services.' },
+      { q:'An FSCA inspector gives you a verbal instruction. Is this binding?', opts:['Yes — always binding','Yes, if you agree verbally','No — FSCA decisions are only valid in writing','Only if followed up within 30 days'], a:2, exp:'All FSCA decisions are only valid in written format — verbal instructions from FSCA officials are not formal decisions.' },
+    ]
+  },
+  { id:2, icon:'💼', title:'Financial Products & Services — What You Can Advise On',
+    summary:'Financial products, advice vs information, intermediary service, your authorisation scope',
+    sections:[
+      { h:'2.1 Financial Products You May Advise On', b:'• Long-term and short-term insurance contracts\n• Participatory interests in collective investment schemes (unit trusts, ETFs)\n• Securities and instruments (shares, bonds, debentures)\n• Retirement annuities and pension fund benefits\n• Health service benefits (medical aid membership)\n• Bank deposits and savings products\n• Friendly society benefits\n• Crypto assets (from 2023)\n\nNOT financial products: residential property, motor vehicles, home loans, personal loans, employment contracts' },
+      { h:'2.2 Advice vs General Information — The Critical Distinction', b:'ADVICE = specific recommendation to a specific client about a specific product that could lead to a financial transaction.\n\nExamples of ADVICE:\n"Based on your retirement needs, I recommend this specific RA fund"\n"I suggest you switch from product X to product Y"\n"You should cancel your existing policy and replace it"\nAutomated / robo-advice IS advice\n\nNOT advice:\nExplaining how unit trusts work in general (without recommending one)\nProviding a product brochure without a recommendation\nAnswering factual questions about product features\nInforming a client of their policy value\n\nTHE TEST: Could the communication reasonably lead the client to make (or not make) a financial decision? If YES = likely advice.' },
+      { h:'2.3 Authorisation Scope', b:'You may ONLY render services in the product sub-categories you are specifically approved for by your FSP.\n\nAdvising on an unapproved sub-category = acting without authorisation = CRIMINAL OFFENCE under Section 7(1)(b)\n\nYour authorisation is per sub-category — being approved for Category I does not mean you can advise on all Category I sub-categories.' },
+    ],
+    tip:'The advice test: specific recommendation to a specific client = advice. General information about products = not advice. Your authorisation = product-sub-category specific.',
+    questions:[
+      { q:'Which of the following is a financial product under the FAIS Act?', opts:['A motor vehicle','A home loan (mortgage bond)','A medical aid membership benefit','Residential property'], a:2, exp:'Medical aid membership benefits are listed financial products under the FAIS Act. The others are not.' },
+      { q:'Providing a brochure about unit trusts without recommending one is:', opts:['Advice','An intermediary service','General information — not advice','A breach of the GCOC'], a:2, exp:'Providing product information without a specific recommendation = general information, not advice.' },
+      { q:'Automated (robo) advice is:', opts:['Excluded from FAIS — technology is not regulated','Included in the definition of advice under FAIS','Only for Category II FSPs','Not relevant to individual representatives'], a:1, exp:'The FAIS Act uses a tech-neutral approach — automated advice is included in the definition of advice.' },
+      { q:'You are approved for Category I sub-cat A (long-term). Advising on unit trusts (sub-cat D) is:', opts:['Permitted with KI approval','Permitted for existing clients only','A criminal offence — acting outside approved categories','Permitted as Cat I covers all sub-categories'], a:2, exp:'Acting outside your specifically approved product sub-categories = acting without authorisation = criminal offence.' },
+      { q:'Crypto assets became financial products under FAIS from:', opts:['2002','2017','2020','2023'], a:3, exp:'FSCA FAIS Notice 40 of 2022 declared crypto assets as financial products, effective from 2023.' },
+    ]
+  },
+  { id:3, icon:'✅', title:'Fit and Proper Requirements for Representatives',
+    summary:'BN 194/2017 four pillars, RE5 exam, DOFA, supervision rules, CPD, COB, PST',
+    sections:[
+      { h:'3.1 Four Pillars — BN 194 of 2017', b:'PILLAR 1 — HONESTY & INTEGRITY: No dishonesty convictions; no debarment history; no prohibition orders; no false statements to regulators; no market abuse findings\n\nPILLAR 2 — COMPETENCE: RE5 exam + required qualifications + experience + minimum 6 CPD hours/year + COB Training + PST\n\nPILLAR 3 — OPERATIONAL ABILITY: Adequate resources, systems and infrastructure to render services properly\n\nPILLAR 4 — FINANCIAL SOUNDNESS: Not sequestrated; not under debt review; no outstanding dishonesty civil judgments\n\nAll four pillars must be maintained CONTINUOUSLY.' },
+      { h:'3.2 RE5 Exam Details', b:'• 50 questions — pass mark 65% (minimum 33 correct answers)\n• Levels: L1 30% (recall) | L2 40% (comprehension) | L3 20% (application) | L4 10% (analysis)\n• Administered by Moonstone Business School\n• Questions are randomised — no two papers are the same\n• Unlimited retakes allowed (exam fees apply per attempt)\n• Must be passed within the prescribed period after DOFA — failure = DEBARMENT' },
+      { h:'3.3 DOFA & Supervision', b:'DOFA = Date of First Appointment: The date you first rendered a financial service. DOFA starts the clock on all qualification and RE5 requirements.\n\nSUPERVISION RULES:\n• Supervisor must be a qualified representative of the SAME FSP\n• Supervisor must be approved for the SAME product categories as you\n• Supervision must be genuine and documented — not merely nominal\n• YOU must disclose to clients that you are operating under supervision\n• Supervisor reviews your advice records and client interactions\n• After DOFA, you have a prescribed period to complete requirements or face debarment' },
+      { h:'3.4 CPD, COB & PST', b:'CPD (Continuous Professional Development): Minimum 6 HOURS PER CALENDAR YEAR — relevant to your approved product categories. Non-completion = competence failure = fit and proper failure.\n\nCOB (Class of Business Training): Required BEFORE dealing in any new CLASS of financial products\n\nPST (Product Specific Training): Required BEFORE advising on any specific NEW PRODUCT added to the FSP\'s offering\n\nAll training records must be kept for 5 years and available to the FSCA on request.' },
+    ],
+    tip:'DOFA starts the clock. Supervisor must be from the SAME FSP. Disclose supervision to clients. CPD = 6 hours/year minimum. PST required before any new product.',
+    questions:[
+      { q:'RE5 consists of how many questions with what pass mark?', opts:['80 questions; 65% (52)','100 questions; 70% (70)','50 questions; 65% (33)','60 questions; 60% (36)'], a:2, exp:'RE5 = 50 questions; pass mark = 65% = minimum 33 correct answers. Administered by Moonstone.' },
+      { q:'DOFA (Date of First Appointment) is important because it:', opts:['Is when the FSP\'s licence was issued','Starts the clock on your qualification and RE5 requirements','Marks when you passed RE5','Marks when you were first supervised'], a:1, exp:'DOFA = Date of First Appointment — starts the clock on all qualification and RE5 exam requirements.' },
+      { q:'Your supervisor must be:', opts:['Any qualified financial planner in the industry','An FSCA-approved compliance officer','A qualified representative of the SAME FSP, approved for the same categories','Any person the KI designates'], a:2, exp:'The supervisor must be a qualified representative employed by the SAME FSP, approved for the same product categories.' },
+      { q:'You are placed under debt review. You must:', opts:['Continue working — only affects banking clients','Immediately inform the FSP/KI — this affects financial soundness','Wait 6 months to see if the situation resolves','Only disclose when the review order lapses'], a:1, exp:'Debt review affects the financial soundness pillar — must be disclosed to the FSP/KI immediately.' },
+      { q:'Minimum CPD hours per calendar year:', opts:['3 hours','6 hours','10 hours','20 hours'], a:1, exp:'BN 194/2017 requires a minimum of 6 CPD hours per calendar year.' },
+    ]
+  },
+  { id:4, icon:'📋', title:'General Code of Conduct — Your Daily Obligations',
+    summary:'Disclosure, FNA, product disclosures, advice records, COI, custody, advertising, complaints',
+    sections:[
+      { h:'4.1 First-Contact Disclosures', b:'At FIRST CONTACT with a new client, disclose:\n• Your full name and that you are a representative\n• FSP\'s full name, FSCA licence number and physical address\n• Product categories you are authorised for\n• Whether you are operating under supervision\n• Any conflict of interest that exists\n• If the FSP is contractually tied to specific product suppliers' },
+      { h:'4.2 FNA — Mandatory Before Advice', b:'Conduct a Financial Needs Analysis (FNA) BEFORE giving ANY advice. FNA must cover:\n• Financial goals and objectives\n• Current financial situation (income, expenses, assets, liabilities)\n• Existing financial products\n• Risk appetite and tolerance\n• Investment horizon (time frame)\n• Tax situation\n• Knowledge and experience of financial products\n• Affordability (can the client sustain premiums/contributions?)' },
+      { h:'4.3 Mandatory Product Disclosures', b:'When recommending a product, disclose ALL of the following:\n• Product name and product supplier\n• Nature and material terms of the product\n• All risks (investment, market, liquidity, counterparty)\n• All fees, charges and commissions (in rand amounts where possible)\n• Cooling-off rights (where applicable)\n• Material exclusions and limitations\n• Material tax implications\n• Past performance WITH disclaimer ("Past performance does not guarantee future results")\n\nNOTE: Performance graphs — NOT mandatory; only provide when client specifically asks.' },
+      { h:'4.4 Advice Record', b:'After giving advice, provide the client with a written ADVICE RECORD containing:\n• Client\'s needs and objectives (from FNA)\n• Products considered\n• Basis for the recommendation\n• Risks, limitations and costs disclosed\n\nVerbal advice must be confirmed in writing within a REASONABLE PERIOD.\nRetained by FSP for 5 YEARS.\nAdvice record is your primary defence if a client later disputes advice given.' },
+      { h:'4.5 COI, Custody & Complaints', b:'COI: Written COI Management Policy — disclosed to clients — identify, avoid and disclose conflicts. Commission-driven recommendations = conflict of interest.\n\nCUSTODY: Client funds in SEPARATE TRUST ACCOUNT — never mixed with FSP funds\n\nCOMPLAINTS:\n• Acknowledge and deal with complaints promptly\n• Follow FSP\'s internal complaints procedure\n• Inform clients of their right to escalate to the FAIS Ombud\n• NEVER obstruct, discourage or penalise a client for complaining\n• Keep records of all complaints and resolutions for 5 years' },
+    ],
+    tip:'FNA = mandatory before ANY advice. All fees must be disclosed. Verbal advice must be confirmed in writing. Client funds = separate trust account. Never obstruct a complaint.',
+    questions:[
+      { q:'The overriding standard of the GCOC requires you to act:', opts:['Profitably for the FSP','Honestly, fairly, with due skill, care and diligence, in the interests of clients','In the interests of the product supplier','As directed by the KI at all times'], a:1, exp:'GCOC Section 2 — the overriding standard requires honest, fair, diligent, client-centred conduct.' },
+      { q:'Before giving advice, you MUST:', opts:['Get written consent from the product supplier','Conduct a Financial Needs Analysis (FNA)','Obtain written approval from the KI','Check the product\'s 10-year track record'], a:1, exp:'The FNA is mandatory before ANY advice — all products, all clients. It is not optional.' },
+      { q:'All fees, charges and commissions must be disclosed:', opts:['Only if they exceed R1 000','Only if the client specifically asks','Always — mandatory product disclosure requirement','Only in the annual client statement'], a:2, exp:'All fees, charges and commissions must always be disclosed — mandatory under the GCOC.' },
+      { q:'Verbal advice must be confirmed in writing:', opts:['Never — verbal advice is sufficient','Within a reasonable period after the interaction','Only for investments above R500 000','Only if the client requests it in writing'], a:1, exp:'Verbal advice must be confirmed in writing within a reasonable period — mandatory under the GCOC.' },
+      { q:'Recommending a product because it pays you the highest commission (not because it\'s most suitable) is:', opts:['Standard sales practice in the industry','Acceptable if disclosed in the advice record','A conflict of interest — a GCOC breach','Legal if the KI has approved it'], a:2, exp:'Commission-driven recommendations at the expense of client suitability = conflict of interest = GCOC breach.' },
+    ]
+  },
+  { id:5, icon:'🔎', title:'FICA Compliance & AML — Your Front-Line Obligations',
+    summary:'CDD for individuals and entities, beneficial owners, PEPs, CTR, STR, tipping off, AML stages',
+    sections:[
+      { h:'5.1 CDD for Individuals', b:'Before doing business with an individual client:\n• Valid SA ID (green barcoded or smart ID card) OR valid passport\n• Proof of RESIDENTIAL ADDRESS — not older than 3 MONTHS (utility bill, bank statement)\n• Verify the document is genuine — compare photo, check security features\n• Record the verification — document type, date of verification' },
+      { h:'5.2 CDD for Legal Entities', b:'COMPANY: Certificate of Incorporation (CoR 14.3), MOI, list of directors, BENEFICIAL OWNER information\nCLOSE CORPORATION: CK1 and CK2 documents, list of members\nTRUST: Trust deed, letters of authority from the Master, list of trustees and beneficial interest holders\nPARTNERSHIP: Partnership agreement, details of all partners\n\nBENEFICIAL OWNER = the natural person who ultimately owns or controls MORE THAN 25% of the entity\nYou must always identify the beneficial owner — prevents shell companies hiding true identities.' },
+      { h:'5.3 PEPs — Enhanced Due Diligence', b:'PEP = Politically Exposed Person: person holding or having held a prominent public function (domestic or foreign)\n\nIncludes: heads of state, senior government officials, MPs, senior military/judicial/municipal officials, state-owned entity CEOs, senior political party officials\n\nAlso includes their close FAMILY MEMBERS and known CLOSE ASSOCIATES\n\nEDD requires:\n• SENIOR MANAGEMENT APPROVAL before business commences\n• Source of funds and wealth verification\n• Enhanced ongoing monitoring of the relationship' },
+      { h:'5.4 CTR & STR', b:'CTR (Cash Threshold Report):\n• Cash EXCEEDING R49 999 (single or aggregated related transactions)\n• File within 3 DAYS via FIC GoAML system\n• Objective — no suspicion required; applies regardless of how legitimate it appears\n\nSTR (Suspicious Transaction Report):\n• File AS SOON AS REASONABLY POSSIBLE after forming suspicion\n• NO minimum amount — suspicion is the trigger\n• TIPPING OFF = CRIMINAL OFFENCE — never tell the client about the STR\n• You are protected from civil liability for good-faith STRs' },
+      { h:'5.5 Money Laundering — Know the Three Stages', b:'PLACEMENT: Criminal proceeds enter the financial system (cash deposits, premium payments) — YOUR highest risk exposure\nLAYERING: Complex transactions to disguise origin (wire transfers, crypto conversions, asset purchases)\nINTEGRATION: Laundered funds re-enter the economy appearing legitimate (real estate, businesses)\n\nCOMMON RED FLAGS:\n• Client insists on cash for large transactions\n• Evasive about source of funds\n• Complex transaction structure with no apparent purpose\n• Early policy surrender shortly after inception\n• Transactions inconsistent with known financial profile\n\nTERRORIST FINANCING = may use LEGITIMATELY obtained funds for illegal purposes. Both ML and TF must be reported.' },
+    ],
+    tip:'CTR = R49 999 / 3 days. STR = suspicion / as soon as possible / no minimum. Tipping off = criminal offence. Placement → Layering → Integration. PEPs = Enhanced Due Diligence.',
+    questions:[
+      { q:'Standard CDD for an individual client requires:', opts:['Employment letter only','A signed FICA declaration only','Valid ID/passport and proof of residential address (not older than 3 months)','Annual income tax return'], a:2, exp:'Standard CDD: valid SA ID/passport + proof of residential address not older than 3 months.' },
+      { q:'A CTR must be filed for cash transactions exceeding:', opts:['R10 000','R25 000','R49 999','R100 000'], a:2, exp:'CTRs required for cash exceeding R49 999 — regardless of apparent legitimacy. Within 3 days.' },
+      { q:'An STR must be submitted:', opts:['Within 30 days','Only for amounts above R49 999','As soon as reasonably possible after suspicion arises','Only after a formal internal investigation'], a:2, exp:'STRs must be filed as soon as reasonably possible — suspicion triggers the obligation; no minimum amount.' },
+      { q:'Tipping off a suspect about an STR is:', opts:['Required by FICA','Good client relations practice','A criminal offence','Allowed if the client asks directly'], a:2, exp:'Tipping off is explicitly criminalised under FICA — informing a suspect of an STR is a criminal offence.' },
+      { q:'The "beneficial owner" of a company for FICA purposes is:', opts:['The company\'s CEO','The company accountant','The natural person who ultimately owns or controls the entity','The company\'s largest creditor'], a:2, exp:'Beneficial owner = natural person who ultimately owns or controls more than 25% of the entity.' },
+    ]
+  },
+  { id:6, icon:'⚖️', title:'FAIS Ombud, Complaints & Debarment',
+    summary:'Ombud jurisdiction, R3.5M limit, complaints procedure, debarment grounds, procedure and FST appeal',
+    sections:[
+      { h:'6.1 FAIS Ombud — Your Clients Can Complain About You', b:'The FAIS Ombud resolves disputes between CLIENTS and FSPs about ADVICE and INTERMEDIARY SERVICES.\n\nWITHIN jurisdiction: unsuitable advice; non-disclosure; misrepresentation; COI not managed; failure to render services\nOUTSIDE jurisdiction: product performance (poor investment returns); criminal matters; matters already before court; time-barred complaints (3-year prescription); liquidated FSPs\n\n• Maximum compensation: R3.5 MILLION per complaint\n• FREE to complainants — no filing fees\n• Prescription: 3 YEARS from complainant\'s awareness\n• Ombud decisions enforceable as court orders' },
+      { h:'6.2 Your Complaints Obligations', b:'• Acknowledge and deal with complaints promptly\n• Investigate fairly and respond in writing\n• Inform clients of their right to escalate to the FAIS Ombud if dissatisfied\n• NEVER obstruct, discourage or penalise a client for complaining\n• Keep records of all complaints and resolutions for 5 years\n• Cooperate fully if an Ombud investigation is initiated\n• Do NOT destroy, alter or conceal relevant records during an investigation' },
+      { h:'6.3 Debarment — What It Means for You', b:'Debarment = removal of your authorisation to render financial services. Listed on FSCA\'s PUBLIC debarment register.\n\nGROUNDS: Material FAIS non-compliance; dishonesty or fraud; failing fit and proper requirements; conviction for a disqualifying offence; failing qualifications within prescribed DOFA period\n\nPROCEDURE:\n1. FSP identifies grounds for debarment\n2. Written notice to you + reasons\n3. Reasonable opportunity for you to respond\n4. FSP makes decision\n5. If debarment proceeds: written decision; immediate effect\n6. FSP notifies FSCA within 15 DAYS\n7. FSCA updates public register\n8. You may appeal to the FINANCIAL SERVICES TRIBUNAL (FST)\n\nNOTE: The appeal body is the FST — NOT the FAIS Ombud.' },
+    ],
+    tip:'FAIS Ombud = advice/service complaints (not product performance). Free. Max R3.5M. 3-year prescription. Debarment appeal = Financial Services Tribunal (FST) — NOT the Ombud.',
+    questions:[
+      { q:'The FAIS Ombud handles complaints about:', opts:['Poor investment returns (product performance)','Banking disputes','Advice and intermediary services — contraventions of GCOC','Criminal matters'], a:2, exp:'The FAIS Ombud handles complaints about advice and intermediary services — NOT product performance.' },
+      { q:'The FAIS Ombud\'s services to complainants are:', opts:['R500 per case','Free of charge — no cost to complainants','1% of the claim value','R1 500 filing fee'], a:1, exp:'The FAIS Ombud service is entirely free to complainants.' },
+      { q:'A debarred representative may appeal to:', opts:['The High Court only','The FAIS Ombud','The Financial Services Tribunal (FST)','The FSCA Commissioner'], a:2, exp:'Debarment appeals go to the Financial Services Tribunal (FST) — established by the FSR Act.' },
+      { q:'Debarment must be reported to the FSCA within:', opts:['5 days','15 days','30 days','60 days'], a:1, exp:'The FSP must notify the FSCA of any debarment within 15 days — FSCA updates the public register.' },
+      { q:'Obstructing or penalising a client for submitting a complaint is:', opts:['Acceptable if done discreetly','A serious breach of the General Code of Conduct','Permitted with the KI\'s approval','Only prohibited for new clients'], a:1, exp:'Obstructing, discouraging or penalising any client for complaining = serious GCOC breach.' },
+    ]
+  }
+];
+
+const RE1_MOCK = [
+  {q:'Section 7(1) licensing became effective on:',opts:['15 November 2002','8 March 2003','30 September 2004','1 April 2018'],a:2},
+  {q:'Acting as an FSP without a valid FAIS licence is:',opts:['A civil matter','A GCOC breach only','A criminal offence under Section 7','Not an offence if in good faith'],a:2},
+  {q:'Material changes must be reported to the FSCA within:',opts:['5 working days','30 calendar days','15 days','60 days'],a:2},
+  {q:'The "twin peaks" model was introduced by:',opts:['FAIS Act 37/2002','Insurance Act 18/2017','FSR Act 9/2017','National Credit Act'],a:2},
+  {q:'BN 194 of 2017 deals with:',opts:['The General Code of Conduct','Compliance officer requirements','Fit and proper requirements','Debarment guidance'],a:2},
+  {q:'RE1 has how many questions?',opts:['50','60','80','100'],a:2},
+  {q:'A CTR must be filed for cash exceeding:',opts:['R10 000','R25 000','R49 999','R100 000'],a:2},
+  {q:'A CTR must be submitted within:',opts:['Same day','3 days','15 days','30 days'],a:1},
+  {q:'Tipping off a suspect about an STR is:',opts:['Required by FICA','Client relationship practice','A criminal offence','Allowed if they ask'],a:2},
+  {q:'Money laundering stages in the correct order:',opts:['Layering, Placement, Integration','Placement, Integration, Layering','Placement, Layering, Integration','Integration, Placement, Layering'],a:2},
+  {q:'Debarment must be reported to the FSCA within:',opts:['5 days','15 days','30 days','60 days'],a:1},
+  {q:'The FAIS Ombud may award compensation up to:',opts:['R500 000','R1 million','R3.5 million','Unlimited'],a:2},
+  {q:'A debarred representative appeals to:',opts:['The High Court','The FAIS Ombud','The Financial Services Tribunal (FST)','The FSCA Commissioner'],a:2},
+  {q:'Client funds held by an FSP must be in:',opts:['The FSP\'s general account','The KI\'s account','A separate trust account — never mixed with FSP funds','Deposited with the FSCA'],a:2},
+  {q:'The COI Management Policy must be:',opts:['Confidential — internal only','Disclosed to clients and publicly available','Submitted to FSCA annually','Reviewed every 5 years'],a:1},
+  {q:'Past performance graphs must be provided:',opts:['For every product','Only when the client specifically requests them','Always for 5yr+ products','Quarterly'],a:1},
+  {q:'Fit and proper requirements are:',opts:['Once-off at licensing','Only for KIs','Ongoing — maintained continuously','Only at FSCA inspections'],a:2},
+  {q:'Crypto assets became financial products from:',opts:['2002','2017','2020','2023'],a:3},
+  {q:'BN 80 of 2003 is:',opts:['Fit and proper requirements','The General Code of Conduct','Compliance officer reqs','Debarment guidance'],a:1},
+  {q:'Minimum CPD hours per calendar year:',opts:['3 hours','6 hours','10 hours','20 hours'],a:1},
+];
+
+const RE5_MOCK = [
+  {q:'As a representative, you are authorised by:',opts:['The FSCA directly','The FAIS Ombud','The FSP','The product supplier'],a:2},
+  {q:'Your authorisation ends when you resign from the FSP:',opts:['After 6 months','After FSCA updates the register','Immediately','After 30 days'],a:2},
+  {q:'RE5 has how many questions and what pass mark?',opts:['80 questions; 65% (52)','100 questions; 70%','50 questions; 65% (33)','60 questions; 60%'],a:2},
+  {q:'Medical aid membership is a financial product:',opts:['No — only insurance is','No — only investments are','Yes — it is a listed financial product','Only if provided by an FSP'],a:2},
+  {q:'A product brochure given without a recommendation is:',opts:['Advice','An intermediary service','General information — not advice','A GCOC breach'],a:2},
+  {q:'DOFA is important because it:',opts:['Is when the FSP\'s licence was issued','Starts the clock on your qualification requirements','Is when you passed RE5','Is when your first client was served'],a:1},
+  {q:'Your supervisor under supervision must be:',opts:['Any qualified financial planner','An FSCA-approved CO','A qualified representative of the SAME FSP','The KI'],a:2},
+  {q:'You must disclose to clients that you are under supervision:',opts:['No — clients don\'t need to know','Only if they ask','Yes — this is mandatory','Only in writing'],a:2},
+  {q:'The FNA is mandatory:',opts:['Only for investments above R100 000','Before any advice — all clients, all products','Only for life insurance','Only at the client\'s request'],a:1},
+  {q:'All fees and commissions must be disclosed:',opts:['Only if above R1 000','Only if asked','Always — mandatory disclosure','Only in annual statements'],a:2},
+  {q:'Verbal advice must be confirmed in writing:',opts:['Never','Within a reasonable period','Only for amounts above R500 000','Only if client requests'],a:1},
+  {q:'Standard CDD for an individual requires:',opts:['Employment letter','Signed FICA declaration','Valid ID + proof of residential address','Annual tax return'],a:2},
+  {q:'A CTR must be filed for cash exceeding:',opts:['R10 000','R25 000','R49 999','R100 000'],a:2},
+  {q:'An STR must be filed:',opts:['Within 30 days','Only for amounts above R49 999','As soon as reasonably possible','After internal investigation only'],a:2},
+  {q:'Tipping off a suspect about an STR is:',opts:['Required by FICA','Good client relations','A criminal offence','Allowed if they ask'],a:2},
+  {q:'The FAIS Ombud handles complaints about:',opts:['Poor investment returns','Banking disputes','Advice and intermediary services','Criminal matters'],a:2},
+  {q:'FAIS Ombud services are:',opts:['R500 per case','Free of charge','1% of claim','R1 500 filing fee'],a:1},
+  {q:'A debarred representative appeals to:',opts:['The High Court only','The FAIS Ombud','The Financial Services Tribunal (FST)','The FSCA Commissioner'],a:2},
+  {q:'Debarment must be reported to FSCA within:',opts:['5 days','15 days','30 days','60 days'],a:1},
+  {q:'Crypto assets became financial products from:',opts:['2002','2017','2020','2023'],a:3},
+];
+
+/* ── MOCK EXAM STATE ────────────────────────────────── */
+let mockState = { exam: null, questions: [], answers: [], current: 0, timer: null, submitted: false };
+
+/* ── PAGE ROUTING ───────────────────────────────────── */
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const page = document.getElementById('page-' + id);
+  const navLink = document.getElementById('nav-' + id);
+  if (page) page.classList.add('active');
+  if (navLink) navLink.classList.add('active');
+  window.scrollTo(0, 0);
+
+  if (id === 'study') renderStudyPage();
+  if (id === 'mock') renderMockPage();
+  if (id === 'admin' && isAdmin) renderAdminPage();
+}
+
+/* ── HERO QUICK ENROLL ───────────────────────────────── */
+function submitHeroForm() {
+  const fields = ['hFirstName','hLastName','hPhone','hEmail','hExam'];
+  for (let f of fields) {
+    if (!document.getElementById(f).value.trim()) {
+      showToast('Please complete all fields.', 'error');
+      return;
+    }
+  }
+  const data = {
+    id: nextId++,
+    name: document.getElementById('hFirstName').value.trim(),
+    surname: document.getElementById('hLastName').value.trim(),
+    phone: document.getElementById('hPhone').value.trim(),
+    email: document.getElementById('hEmail').value.trim(),
+    exam: document.getElementById('hExam').value,
+    role: 'Not specified',
+    contact: 'WhatsApp',
+    status: 'pending',
+    date: new Date().toISOString().split('T')[0]
+  };
+  enrollments.push(data);
+  currentUser = data;
+  document.getElementById('heroCardWrap').style.display = 'none';
+  document.getElementById('heroSuccessCard').style.display = 'block';
+  showToast('✅ Enrollment submitted! ConnieM will review and contact you within 24–48 hours.');
+}
+
+/* ── FULL ENROLL FORM ────────────────────────────────── */
+let selectedContactMethod = 'WhatsApp';
+
+function setContact(method) {
+  selectedContactMethod = method;
+  ['WA','EM','PH'].forEach(s => {
+    const btn = document.getElementById('contact' + s);
+    if (btn) { btn.style.background = ''; btn.style.color = ''; btn.style.borderColor = ''; }
+  });
+  const map = { WhatsApp:'WA', Email:'EM', Phone:'PH' };
+  const btn = document.getElementById('contact' + map[method]);
+  if (btn) { btn.style.background = 'var(--gold-100)'; btn.style.color = 'var(--gold-700)'; btn.style.borderColor = 'var(--gold-400)'; }
+}
+
+function clearErrors() {
+  ['eFirstName','eLastName','ePhone','eEmail','eExam','eRole'].forEach(id => {
+    const el = document.getElementById('err-' + id);
+    if (el) el.textContent = '';
+    const input = document.getElementById(id);
+    if (input) input.classList.remove('error');
+  });
+}
+
+function submitEnrollForm() {
+  clearErrors();
+  let valid = true;
+  const required = {
+    eFirstName: 'Full names are required',
+    eLastName: 'Surname is required',
+    ePhone: 'Cellphone number is required',
+    eEmail: 'Valid email address is required',
+    eExam: 'Please select the exam you are preparing for',
+    eRole: 'Please select your current role'
+  };
+  for (let [id, msg] of Object.entries(required)) {
+    const val = document.getElementById(id)?.value?.trim();
+    if (!val) {
+      document.getElementById('err-' + id).textContent = msg;
+      document.getElementById(id).classList.add('error');
+      valid = false;
+    }
+  }
+  if (!valid) { showToast('Please complete all required fields.', 'error'); return; }
+
+  const data = {
+    id: nextId++,
+    name: document.getElementById('eFirstName').value.trim(),
+    surname: document.getElementById('eLastName').value.trim(),
+    phone: document.getElementById('ePhone').value.trim(),
+    email: document.getElementById('eEmail').value.trim(),
+    exam: document.getElementById('eExam').value,
+    role: document.getElementById('eRole').value,
+    contact: selectedContactMethod,
+    status: 'pending',
+    date: new Date().toISOString().split('T')[0]
+  };
+  enrollments.push(data);
+  currentUser = data;
+  document.getElementById('enrollFormCard').style.display = 'none';
+  document.getElementById('enrollSuccessCard').style.display = 'block';
+  showToast('🎓 Enrollment submitted successfully! Awaiting ConnieM\'s approval.');
+}
+
+function simulateApproval() {
+  isApproved = true;
+  if (currentUser) {
+    const i = enrollments.findIndex(e => e.id === currentUser.id);
+    if (i >= 0) enrollments[i].status = 'approved';
+  }
+  document.getElementById('nav-study-badge').textContent = '✓';
+  document.getElementById('nav-study-badge').style.background = 'rgba(26,107,60,.2)';
+  document.getElementById('nav-study-badge').style.color = 'var(--success)';
+  document.getElementById('nav-mock-badge').textContent = '✓';
+  document.getElementById('nav-mock-badge').style.background = 'rgba(26,107,60,.2)';
+  document.getElementById('nav-mock-badge').style.color = 'var(--success)';
+  showToast('🔓 Access granted! Study guides and mock exams are now unlocked. Welcome to the Sayung Study Series!');
+}
+
+/* ── STUDY PAGE ───────────────────────────────────────── */
+function renderStudyPage() {
+  const c = document.getElementById('studyContainer');
+  if (!isApproved) {
+    c.innerHTML = `<div class="locked-overlay">
+      <div class="locked-icon">🔒</div>
+      <div class="locked-title">Study Guides — Locked</div>
+      <p class="locked-desc">The complete RE1 and RE5 study guides are available exclusively to enrolled and approved students. Submit your enrollment to gain access.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn btn-gold" onclick="showPage('enroll')">Enroll Now →</button>
+        <button class="btn btn-ghost" onclick="showPage('tips')">View Free Exam Tips</button>
+      </div>
+    </div>`;
+    return;
+  }
+
+  let examMode = 're1';
+  c.innerHTML = `
+    <div class="tab-nav">
+      <button class="tab-btn active" id="stab-re1" onclick="switchStudyTab('re1')">RE1 — Key Individuals</button>
+      <button class="tab-btn" id="stab-re5" onclick="switchStudyTab('re5')">RE5 — Representatives</button>
+    </div>
+    <div id="study-header-re1" style="">
+      <div style="background:var(--navy-900);border-radius:14px;padding:1.5rem 2rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--white);">RE1 — Complete Study Guide</div><div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px;">6 Topics • 30 Practice Questions • Sayung Study Series by ConnieM Private Tutor</div></div>
+        <div style="text-align:right;"><div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--gold-300);">RE1</div><div style="font-size:11px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;">Key Individuals</div></div>
+      </div>
+    </div>
+    <div id="study-header-re5" style="display:none;">
+      <div style="background:var(--navy-900);border-radius:14px;padding:1.5rem 2rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--white);">RE5 — Complete Study Guide</div><div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:2px;">6 Topics • 30 Practice Questions • Sayung Study Series by ConnieM Private Tutor</div></div>
+        <div style="text-align:right;"><div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--gold-300);">RE5</div><div style="font-size:11px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;">Representatives</div></div>
+      </div>
+    </div>
+    <div id="study-topics-re1">${buildTopicsHTML(RE1_TOPICS,'re1')}</div>
+    <div id="study-topics-re5" style="display:none;">${buildTopicsHTML(RE5_TOPICS,'re5')}</div>
+  `;
+}
+
+function switchStudyTab(tab) {
+  ['re1','re5'].forEach(t => {
+    document.getElementById('study-topics-' + t).style.display = t === tab ? 'block' : 'none';
+    document.getElementById('study-header-' + t).style.display = t === tab ? 'block' : 'none';
+    document.getElementById('stab-' + t).classList.toggle('active', t === tab);
+  });
+}
+
+function buildTopicsHTML(topics, prefix) {
+  return topics.map(topic => `
+    <div class="accordion">
+      <button class="acc-header" id="acc-${prefix}-${topic.id}" onclick="toggleAcc('${prefix}-${topic.id}')">
+        <div class="acc-title-wrap">
+          <span class="acc-num">TOPIC ${String(topic.id).padStart(2,'0')}</span>
+          <div>
+            <div class="acc-title-text">${topic.icon} ${topic.title}</div>
+            <div class="acc-subtitle">${topic.summary}</div>
+          </div>
+        </div>
+        <span class="acc-icon" id="accicon-${prefix}-${topic.id}">▾</span>
+      </button>
+      <div class="acc-body" id="accbody-${prefix}-${topic.id}">
+        ${topic.sections.map(s => `
+          <div class="study-section">
+            <h4>${s.h}</h4>
+            <div class="study-section-content">${s.b}</div>
+          </div>`).join('')}
+        <div class="exam-tip" style="margin-top:1rem;">💡 <strong>Exam Tip:</strong> ${topic.tip}</div>
+        <div class="pq-wrap">
+          <div class="pq-heading">Practice Questions — Topic ${topic.id}</div>
+          ${topic.questions.map((q, qi) => `
+            <div class="pq-item">
+              <div class="pq-question">Q${qi+1}. ${q.q}</div>
+              <div>
+                ${q.opts.map((o,oi) => `<button class="pq-opt" id="${prefix}t${topic.id}q${qi}o${oi}" onclick="answerPQ('${prefix}',${topic.id},${qi},${oi},${q.a},'${q.exp.replace(/'/g,"\\'")}')">
+                  ${String.fromCharCode(65+oi)}. ${o}</button>`).join('')}
+              </div>
+              <div class="pq-explanation" id="${prefix}t${topic.id}q${qi}exp">✔ ${q.exp}</div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function toggleAcc(id) {
+  const header = document.getElementById('acc-' + id);
+  const body = document.getElementById('accbody-' + id);
+  const icon = document.getElementById('accicon-' + id);
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  header.classList.toggle('open', !isOpen);
+  icon.classList.toggle('open', !isOpen);
+}
+
+function answerPQ(prefix, topicId, qi, chosen, correct, exp) {
+  const opts = document.querySelectorAll(`[id^="${prefix}t${topicId}q${qi}o"]`);
+  opts.forEach(b => { b.disabled = true; b.classList.remove('correct','wrong'); });
+  opts[correct].classList.add('correct');
+  if (chosen !== correct) opts[chosen].classList.add('wrong');
+  const expEl = document.getElementById(`${prefix}t${topicId}q${qi}exp`);
+  if (expEl) expEl.style.display = 'block';
+}
+
+/* ── MOCK EXAM ────────────────────────────────────────── */
+function renderMockPage() {
+  const c = document.getElementById('mockContainer');
+  if (!isApproved) {
+    c.innerHTML = `<div class="locked-overlay">
+      <div class="locked-icon">🔒</div>
+      <div class="locked-title">Mock Examinations — Locked</div>
+      <p class="locked-desc">Timed mock exams with instant scoring are available to enrolled and approved students. Enroll now to gain access.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn btn-gold" onclick="showPage('enroll')">Enroll Now →</button>
+        <button class="btn btn-ghost" onclick="showPage('about')">Learn About the Exams</button>
+      </div>
+    </div>`;
+    return;
+  }
+  if (mockState.exam === null || mockState.submitted === false && mockState.answers.length === 0) {
+    renderMockSelect();
+  }
+}
+
+function renderMockSelect() {
+  const c = document.getElementById('mockContainer');
+  c.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:700px;">
+      ${[
+        {key:'re1',label:'RE1 Mock Exam',n:RE1_MOCK.length,time:'60 min',badge:'badge-re1',desc:'Key Individuals — FSP & KI Management'},
+        {key:'re5',label:'RE5 Mock Exam',n:RE5_MOCK.length,time:'45 min',badge:'badge-re5',desc:'Representatives — All FSP Categories'}
+      ].map(e => `
+        <div class="card card-gold-border" style="text-align:left;">
+          <span class="badge ${e.badge}" style="margin-bottom:1rem;">${e.key.toUpperCase()}</span>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy-900);margin-bottom:.3rem;">${e.label}</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:1.5rem;">${e.desc}</p>
+          ${[['Questions',e.n],['Time',e.time],['Pass Mark','65%'],['Randomised','Yes']].map(([l,v]) => `
+            <div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border-light);font-size:13px;">
+              <span style="color:var(--text-muted);">${l}</span>
+              <span style="font-weight:600;color:var(--navy-900);">${v}</span>
+            </div>`).join('')}
+          <button class="btn btn-gold btn-full" style="margin-top:1.5rem;" onclick="startMock('${e.key}')">Start Exam →</button>
+        </div>`).join('')}
+    </div>
+    <div style="margin-top:2rem;background:var(--ivory-200);border:1px solid var(--border-light);border-radius:14px;padding:1.2rem 1.5rem;">
+      <p style="font-size:13.5px;color:var(--text-muted);"><strong style="color:var(--navy-900);">Exam tip:</strong> Treat the mock exam like the real Moonstone exam. Close your notes. Once you select an answer and move on, you can review but cannot reselect. Aim for 80%+ before booking the actual exam.</p>
+    </div>`;
+}
+
+function startMock(examKey) {
+  const questions = examKey === 're1' ? RE1_MOCK : RE5_MOCK;
+  const timeLimit = examKey === 're1' ? 60 * 60 : 45 * 60;
+  mockState = { exam: examKey, questions, answers: new Array(questions.length).fill(null), current: 0, timer: null, submitted: false, timeLeft: timeLimit };
+  renderMockQuestion();
+  startMockTimer();
+}
+
+function renderMockQuestion() {
+  const c = document.getElementById('mockContainer');
+  const { questions, current, answers, exam } = mockState;
+  const q = questions[current];
+  const pct = Math.round((current + 1) / questions.length * 100);
+  c.innerHTML = `
+    <div style="max-width:720px;">
+      <div class="mock-header">
+        <div class="mock-title">${exam.toUpperCase()} — Mock Examination</div>
+        <div class="mock-timer" id="mockTimerEl">--:--</div>
+      </div>
+      <div class="mock-progress-bar"><div class="mock-progress-fill" style="width:${pct}%;"></div></div>
+      <div class="mock-body">
+        <div class="mock-q-num">Question ${current + 1} of ${questions.length}  ·  ${answers.filter(a=>a!==null).length} answered</div>
+        <div class="mock-q-text">${q.q}</div>
+        <div>
+          ${q.opts.map((o,oi) => {
+            const sel = answers[current];
+            let cls = 'mock-opt';
+            if (sel !== null) {
+              if (oi === q.a) cls += ' correct-ans';
+              else if (oi === sel) cls += ' wrong-ans';
+            } else if (sel === oi) cls += ' selected';
+            return `<button class="${cls}" id="mopt${oi}" ${sel!==null?'disabled':''} onclick="selectMockOpt(${oi})">${String.fromCharCode(65+oi)}. ${o}</button>`;
+          }).join('')}
+        </div>
+        <div class="mock-nav">
+          <span class="mock-counter">${current + 1} / ${questions.length}</span>
+          <div style="display:flex;gap:10px;">
+            ${current > 0 ? `<button class="btn btn-ghost btn-sm" onclick="mockNav(-1)">← Prev</button>` : ''}
+            ${current < questions.length - 1
+              ? `<button class="btn btn-navy btn-sm" onclick="mockNav(1)" ${answers[current]===null?'style="opacity:.6"':''}>Next →</button>`
+              : `<button class="btn btn-gold btn-sm" onclick="submitMock()">Submit Exam ✓</button>`}
+          </div>
+        </div>
+      </div>
+    </div>`;
+  updateTimerDisplay();
+}
+
+function selectMockOpt(oi) {
+  if (mockState.answers[mockState.current] !== null) return;
+  mockState.answers[mockState.current] = oi;
+  const q = mockState.questions[mockState.current];
+  document.querySelectorAll('.mock-opt').forEach(b => b.disabled = true);
+  for (let i = 0; i < q.opts.length; i++) {
+    const el = document.getElementById('mopt' + i);
+    if (!el) continue;
+    if (i === q.a) el.classList.add('correct-ans');
+    else if (i === oi && oi !== q.a) el.classList.add('wrong-ans');
+  }
+}
+
+function mockNav(dir) {
+  mockState.current = Math.max(0, Math.min(mockState.questions.length - 1, mockState.current + dir));
+  renderMockQuestion();
+}
+
+function startMockTimer() {
+  if (mockState.timer) clearInterval(mockState.timer);
+  mockState.timer = setInterval(() => {
+    if (mockState.submitted) { clearInterval(mockState.timer); return; }
+    mockState.timeLeft--;
+    updateTimerDisplay();
+    if (mockState.timeLeft <= 0) { clearInterval(mockState.timer); submitMock(); }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const el = document.getElementById('mockTimerEl');
+  if (!el) return;
+  const t = mockState.timeLeft;
+  const m = String(Math.floor(t / 60)).padStart(2, '0');
+  const s = String(t % 60).padStart(2, '0');
+  el.textContent = `${m}:${s}`;
+  if (t < 300) el.classList.add('urgent');
+}
+
+function submitMock() {
+  if (mockState.timer) clearInterval(mockState.timer);
+  mockState.submitted = true;
+  const { questions, answers, exam } = mockState;
+  const score = answers.filter((a, i) => a === questions[i].a).length;
+  const pct = Math.round(score / questions.length * 100);
+  const passed = pct >= 65;
+  const c = document.getElementById('mockContainer');
+  c.innerHTML = `
+    <div style="max-width:720px;">
+      <div class="mock-header">
+        <div class="mock-title">${exam.toUpperCase()} Mock — Results</div>
+        <div class="mock-timer" style="color:${passed?'var(--success)':'var(--error)'};">${passed?'PASSED ✓':'NOT PASSED'}</div>
+      </div>
+      <div class="mock-body mock-results">
+        <div class="score-ring ${passed?'pass':'fail'}">
+          <div class="score-pct" style="color:${passed?'var(--success)':'var(--error)'};">${pct}%</div>
+          <div class="score-label" style="color:${passed?'var(--success)':'var(--error)'};">${passed?'PASSED':'NOT YET'}</div>
+        </div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--navy-900);margin-bottom:.5rem;">${passed?'Congratulations! 🎉':'Keep Studying — You\'re Getting There! 💪'}</h2>
+        <p style="color:var(--text-muted);margin-bottom:2rem;">You scored <strong>${score}/${questions.length}</strong> correct answers (${pct}%). The pass mark is 65% — minimum <strong>${Math.ceil(questions.length*0.65)}/${questions.length}</strong> correct.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;">
+          <button class="btn btn-gold" onclick="mockState={exam:null,questions:[],answers:[],current:0,timer:null,submitted:false};renderMockSelect()">Take Another Exam</button>
+          <button class="btn btn-ghost" onclick="showPage('study')">Review Study Guide</button>
+        </div>
+        <div style="text-align:left;">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--navy-900);margin-bottom:1rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">Answer Review</h3>
+          ${questions.map((q,i) => {
+            const ua = answers[i];
+            const ok = ua === q.a;
+            return `<div style="background:${ok?'var(--success-bg)':'var(--error-bg)'};border-radius:10px;padding:.9rem 1.1rem;margin-bottom:.6rem;border-left:4px solid ${ok?'var(--success)':'var(--error)'};">
+              <div style="font-size:13px;font-weight:600;color:var(--navy-900);margin-bottom:3px;">${i+1}. ${q.q}</div>
+              <div style="font-size:12.5px;color:${ok?'var(--success)':'var(--error)'};">Your answer: ${ua!==null?String.fromCharCode(65+ua)+'. '+q.opts[ua]:'Not answered'}</div>
+              ${!ok?`<div style="font-size:12.5px;color:var(--success);margin-top:2px;">Correct: ${String.fromCharCode(65+q.a)}. ${q.opts[q.a]}</div>`:''}
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+    </div>`;
+}
+
+/* ── ADMIN ────────────────────────────────────────────── */
+function openAdminModal() { document.getElementById('adminModal').style.display = 'flex'; }
+function closeAdminModal() { document.getElementById('adminModal').style.display = 'none'; document.getElementById('adminPinInput').value = ''; }
+
+function verifyAdmin() {
+  if (document.getElementById('adminPinInput').value === 'connie2025') {
+    isAdmin = true;
+    closeAdminModal();
+    document.getElementById('nav-admin').style.display = 'inline-block';
+    showPage('admin');
+    showToast('Welcome back, ConnieM! 👋');
+  } else {
+    showToast('Incorrect PIN. Please try again.', 'error');
+  }
+}
+
+let adminFilter = 'all';
+let adminSearch = '';
+
+function renderAdminPage() {
+  const c = document.getElementById('adminContainer');
+  const counts = {
+    all: enrollments.length,
+    pending: enrollments.filter(e=>e.status==='pending').length,
+    approved: enrollments.filter(e=>e.status==='approved').length,
+    declined: enrollments.filter(e=>e.status==='declined').length,
+  };
+  const filtered = enrollments.filter(e => {
+    const matchFilter = adminFilter === 'all' || e.status === adminFilter;
+    const term = adminSearch.toLowerCase();
+    const matchSearch = !term || `${e.name} ${e.surname} ${e.email} ${e.exam}`.toLowerCase().includes(term);
+    return matchFilter && matchSearch;
+  });
+
+  c.innerHTML = `
+    <div class="admin-stats">
+      ${Object.entries(counts).map(([k,v]) => `
+        <div class="admin-stat">
+          <div class="admin-stat-val">${v}</div>
+          <div class="admin-stat-label" style="text-transform:capitalize;">${k} Applications</div>
+        </div>`).join('')}
+    </div>
+    <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;align-items:center;">
+      <div style="display:flex;gap:4px;background:var(--white);border:1px solid var(--border-light);border-radius:10px;padding:4px;">
+        ${['all','pending','approved','declined'].map(f => `
+          <button onclick="adminFilter='${f}';renderAdminPage()" style="padding:7px 16px;border-radius:8px;border:none;background:${adminFilter===f?'var(--navy-900)':'none'};color:${adminFilter===f?'var(--gold-200)':'var(--text-muted)'};font-size:13px;font-weight:600;text-transform:capitalize;cursor:pointer;">
+            ${f} (${counts[f]})</button>`).join('')}
+      </div>
+      <input type="text" value="${adminSearch}" placeholder="🔍 Search by name, email or exam..." oninput="adminSearch=this.value;renderAdminPage()"
+        style="flex:1;min-width:200px;padding:10px 14px;border:1.5px solid var(--border-light);border-radius:10px;font-size:14px;background:var(--ivory-200);" />
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>#</th><th>Student</th><th>Cellphone</th><th>Exam</th><th>Role</th><th>Contact</th><th>Date</th><th>Status</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${filtered.length === 0 ? `<tr><td colspan="9" style="text-align:center;color:var(--text-muted);padding:3rem;">No enrollments found.</td></tr>` :
+            filtered.map(e => `
+              <tr>
+                <td style="color:var(--text-light);">${e.id}</td>
+                <td><div style="font-weight:600;color:var(--navy-900);">${e.name} ${e.surname}</div><div style="font-size:12px;color:var(--text-muted);">${e.email}</div></td>
+                <td style="color:var(--text-muted);">${e.phone}</td>
+                <td><span class="badge ${e.exam==='RE1 — Key Individuals'?'badge-re1':e.exam==='RE5 — Representatives'?'badge-re5':'badge-re1'}" style="font-size:11px;">${e.exam}</span></td>
+                <td style="font-size:13px;color:var(--text-muted);max-width:140px;">${e.role}</td>
+                <td style="font-size:13px;color:var(--text-muted);">${e.contact}</td>
+                <td style="font-size:12px;color:var(--text-muted);">${e.date}</td>
+                <td><span class="badge badge-${e.status}">${e.status}</span></td>
+                <td>
+                  ${e.status === 'pending' ? `
+                    <div style="display:flex;gap:6px;">
+                      <button class="btn btn-success btn-sm" onclick="approveEnrollment(${e.id})">✓ Approve</button>
+                      <button class="btn btn-danger btn-sm" onclick="declineEnrollment(${e.id})">✕ Decline</button>
+                    </div>` :
+                    e.status === 'approved' ? `<span style="color:var(--success);font-size:13px;">✓ Active</span>` :
+                    `<span style="color:var(--error);font-size:13px;">✕ Declined</span>`}
+                </td>
+              </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:1.5rem;background:var(--gold-50);border:1px solid var(--gold-200);border-radius:12px;padding:1rem 1.5rem;font-size:13.5px;color:var(--gold-700);">
+      <strong>ConnieM's Note:</strong> Approved students gain immediate access to study guides and mock examinations. Declined applications can be reviewed and re-approved at any time. All student data is kept strictly confidential.
+    </div>`;
+}
+
+function approveEnrollment(id) {
+  enrollments = enrollments.map(e => e.id === id ? { ...e, status: 'approved' } : e);
+  if (currentUser && currentUser.id === id) {
+    isApproved = true;
+    document.getElementById('nav-study-badge').textContent = '✓';
+    document.getElementById('nav-mock-badge').textContent = '✓';
+  }
+  renderAdminPage();
+  showToast('✅ Enrollment approved! Student now has access to study materials.');
+}
+
+function declineEnrollment(id) {
+  enrollments = enrollments.map(e => e.id === id ? { ...e, status: 'declined' } : e);
+  renderAdminPage();
+  showToast('❌ Enrollment declined.', 'error');
+}
+
+/* ── TOAST ────────────────────────────────────────────── */
+let toastTimer = null;
+function showToast(msg, type = 'success') {
+  if (toastTimer) clearTimeout(toastTimer);
+  const el = document.getElementById('toastEl');
+  el.className = `toast toast-${type}`;
+  el.textContent = msg;
+  el.style.display = 'block';
+  toastTimer = setTimeout(() => { el.style.display = 'none'; }, 4000);
+}
+
+/* ── INIT ─────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  setContact('WhatsApp');
+});
+</script>
+</body>
+</html>
